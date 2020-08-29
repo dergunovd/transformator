@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useController } from "react-scroll-parallax";
+import "normalize.css/normalize.css";
 
-function App() {
+import { Production } from "./screens/Production/Production";
+import { Video } from "./screens/Video/Video";
+import { Team } from "./screens/Team/Team";
+import { Footer } from "./screens/Footer/Footer";
+
+export default () => {
+  const { parallaxController } = useController();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      onLoad={parallaxController.update}
+      onScroll={parallaxController.update}
+    >
+      <Production />
+      <Video />
+      <Team />
+      <Footer />
     </div>
   );
-}
-
-export default App;
+};
