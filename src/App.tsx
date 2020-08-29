@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useController } from "react-scroll-parallax";
+import "normalize.css/normalize.css";
 
-function App() {
+import { Production } from "./sections/Production/Production";
+import { Cases } from "./sections/Cases/Cases";
+import { Team } from "./sections/Team/Team";
+import { Popup } from "./components/Popup/Popup";
+import { PopupProvider } from "./context/popup.context";
+import { Services } from "./sections/Services/Services";
+import { Reviews } from "./sections/Reviews/Reviews";
+import { Planet } from "./sections/Planet/Planet";
+import { Video } from "./sections/Video/Video";
+import { Dima } from "./sections/Dima/Dima";
+import { Footer } from "./sections/Footer/Footer";
+import { Feedback } from "./sections/Feedback/Feedback";
+
+export default () => {
+  const { parallaxController } = useController();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      onLoad={parallaxController.update}
+      onScroll={parallaxController.update}
+    >
+      <PopupProvider>
+        <Production />
+        <Video />
+        <main>
+          <Dima />
+          <Cases />
+          <Team />
+          <Planet />
+          <Services />
+          <Reviews />
+          <Feedback />
+          <Footer />
+        </main>
+        <Popup />
+      </PopupProvider>
     </div>
   );
-}
-
-export default App;
+};

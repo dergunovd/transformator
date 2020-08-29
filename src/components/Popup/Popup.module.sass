@@ -1,0 +1,70 @@
+.close
+  width: 13px
+  height: 13px
+  background: url("assets/close.png") center center / contain
+  opacity: .9
+  transition: .3s
+  position: absolute
+  right: 20px
+  top: 20px
+  cursor: pointer
+  &:hover
+    opacity: 1
+
+.title
+  font-size: 19px
+  font-weight: bold
+  line-height: 26px
+  max-width: 245px
+  margin: 0 auto 35px
+
+.input
+  border-radius: 17px
+  width: 240px
+  max-width: 100%
+  background-color: rgba(236, 236, 236,.1)
+  margin-bottom: 25px
+  color: white
+  border: none
+  padding: 25px
+  @media (min-width: 640px)
+    width: 360px
+  &:focus
+    border: none
+    outline: none
+  &::placeholder
+    color: white
+  &:nth-child(4)
+    margin-bottom: 40px
+
+.button
+  max-width: 100%
+
+.checkbox
+  cursor: pointer
+  display: block
+  max-width: 245px
+  opacity: 0.8
+  font-size: 10px
+  font-weight: 300
+  line-height: 13px
+  margin: 0 auto 20px
+  position: relative
+  text-align: left
+  padding-left: 30px
+  a
+    color: white
+  input
+    display: none
+    &:checked+.myCheckbox
+      background: white url("assets/items/tick.png") center center no-repeat
+  .myCheckbox
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    background: white
+    border-radius: 50%
+    left: 0
+    top: 2px
+    position: absolute

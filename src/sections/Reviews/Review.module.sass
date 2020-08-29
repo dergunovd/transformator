@@ -1,0 +1,118 @@
+.reviews
+  position: relative
+  margin-top: 29vw
+  padding: 0 10px
+  @media (min-width: 640px)
+    margin-top: 12vw
+  @media (min-width: 1140px)
+    width: 90vw
+    margin-top: 10vw
+  @media (max-width: 639px)
+    button[type=button]
+      position: absolute
+      top: 140vw
+      margin: 0
+      &[class$="PREV"]
+        left: 50px
+      &[class$="NEXT"]
+        right: 50px
+  nav
+    position: absolute
+    bottom: 0
+    @media (min-width: 640px)
+      margin-left: 72px
+    @media (min-width: 1280px)
+      bottom: 2vw
+    @media (min-width: 1680px)
+      bottom: 4vw
+    @media (min-width: 1800px)
+      bottom: 6vw
+
+.reviewsContent
+  position: relative
+  width: 100%
+  @media (min-width: 640px)
+    width: 55vw
+  @media (min-width: 1140px)
+    width: 50vw
+
+.review
+  display: flex
+  justify-content: flex-start
+  flex-direction: column
+  align-items: flex-start
+  width: 100%
+  height: 140vw
+  text-align: left
+  position: relative
+  @media (min-width: 480px)
+    height: 150vw
+  @media (min-width: 640px)
+    justify-content: center
+    height: 45vw
+    padding: 0 20px
+  @media (min-width: 1140px)
+    height: 28vw
+    padding: 0 10px
+
+.header
+  margin-top: 58vw
+  line-height: 1.2
+  font-family: "Muller", sans-serif
+  font-size: 34px
+  font-weight: 800
+  text-align: left
+  margin-bottom: 20px
+  width: 100%
+  color: #fff
+  opacity: 1
+  @media (min-width: 640px)
+    margin-top: 0
+    padding-top: 0
+    font-size: 35px
+  @media (min-width: 1140px)
+    margin-bottom: 0
+    font-size: 44px
+
+.subtitle
+  font-family: "Muller", sans-serif
+  font-style: italic
+  font-size: 17px
+  line-height: 25px
+  font-weight: 400
+  @media (min-width: 640px)
+    font-size: 17px
+  @media (min-width: 1140px)
+    font-size: 21px
+
+.description
+  width: 100%
+  opacity: 0.5
+  font-size: 12px
+  font-weight: 400
+  line-height: 17px
+  @media (min-width: 480px)
+    padding-bottom: 340px
+  @media (min-width: 640px)
+    font-size: 14px
+    line-height: 20px
+    padding-bottom: 0
+  @media (min-width: 1140px)
+    font-size: 16px
+    line-height: 24px
+
+.image
+  position: absolute
+  top: 75px
+  left: 0
+  right: 0
+  width: 100%
+  margin: auto
+  @media (min-width: 640px)
+    left: 50vw
+    width: 45vw
+    top: 15vw
+  @media (min-width: 1140px)
+    left: 45vw
+    width: 40vw
+    top: 13vw

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/transformator.iml" filepath="$PROJECT_DIR$/.idea/transformator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../transformator-server/.idea/transformator-server.iml" filepath="$PROJECT_DIR$/../transformator-server/.idea/transformator-server.iml" />
     </modules>
   </component>
 </project>

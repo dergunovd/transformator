@@ -1,0 +1,105 @@
+.audioplayer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3em 0 0.3em;
+    border: 0.063em solid #ebeceb;
+
+    &-bar {
+        width: 17.2em;
+        height: 0.375em;
+        background-color: #d8d8d8;
+        cursor: pointer;
+        
+        @include desktop {
+          width: 27.2em;
+        }
+
+      &-loaded {
+      }
+
+      &-played {
+        height: 0.375em;
+        width: 0;
+        background-color: #6472c7;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -0.175em;
+            right: -0.375em;
+            border-radius: 50%;
+            width: 0.7em;
+            height: 0.7em;
+            background-color: #6472c7;
+        }
+      }
+    }
+
+    &-playpause {
+        font-size: inherit;
+        transition: all 0.3s;
+        width: 1.1em;
+        height: 1.1em;
+        background: url("../img/play.svg") 0 0 no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        text-decoration: none;
+        .audioplayer-playing & {
+            width: 1.1em;
+            height: 1.1em;
+            background: url("../img/pause.svg") 0 0 no-repeat;
+            background-size: contain;
+        }
+
+      a {
+          font-size: 0;
+        &:hover {}
+        &:active {}
+        &:focus {}
+      }
+    }
+
+    &-time{
+        font-size: 0;
+
+        &.audioplayer-time-current {
+        }
+        &.audioplayer-time-duration {
+        }
+    }
+
+    &-volume {
+        .audioplayer-volume-button {
+            // width: 1.2em;
+            // height: 1em;
+            // font-size: inherit;
+            // background: url("../img/volume.svg") 0 0 no-repeat;
+            // background-size: contain;
+            // // transition: all 0.3s;
+            // margin-right: 0.8em;
+            // cursor: pointer;
+            // .audioplayer-muted  & {
+            //     font-size: inherit;
+            //     width: 1em;
+            //     height: 1em;
+            //     margin-right: 1em;
+            //     background: url("../img/volume-muted.svg") 0 0 no-repeat;
+            //     background-size: cover;
+            // }
+            a {
+                font-size: 0;
+            &:hover {}
+            &:active {}
+            &:focus {}
+          }
+        }
+        .audioplayer-volume-adjust {
+          div {
+          }
+        }
+      }
+  }
+
+

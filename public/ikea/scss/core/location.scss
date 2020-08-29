@@ -1,0 +1,86 @@
+.location {
+    position: relative;
+    padding-top: 1.3em;
+    overflow: hidden;
+    
+    &__container {
+        position: relative;
+        padding-top: 71.9em;
+
+        @include desktop {
+            padding-top: 42.3em;
+        }
+    }
+    
+    &__img {
+        position: absolute;
+        top: 1.2em;
+        right: -21.3em;
+        background-image: url('../img/location-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 46.3em;
+        height: 62em;
+
+        @include desktop {
+            background-image: url('../img/location.png');
+            top: -3em;
+            right: -23.7em;
+            width: 94.556em;
+            height: 40.9em;
+
+        }
+    }
+
+    &__list-item {
+        position: absolute;
+
+        &_left {
+            bottom: 36.4em;
+            left: 1em;
+
+            @include desktop {
+                bottom: 7.5em;
+                left: 7em;
+            }
+        }
+
+        &_right {
+            bottom: 3em;
+            right: 10.6em;
+            
+            @include desktop {
+                bottom: 6.1em;
+                right: 29em;
+            }
+        }
+    }
+
+    &__clouds-left {
+        @include desktop {
+            position: absolute;
+            bottom: -12.5em;
+            left: -26em;
+            z-index: 1;
+            width: 58em;
+            height: 88.2em;
+        }
+    }
+
+    &__clouds-right {
+        
+        position: absolute;
+        bottom: 7.2em;
+        right: -20em;
+        z-index: 1;
+        width: 36em;
+        height: 26em;
+
+        @include desktop {
+            bottom: -9.5em;
+            right: -38.5em;
+            width: 81.313em;
+            height: 57.938em;
+        }
+    }
+}

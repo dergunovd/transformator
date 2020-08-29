@@ -1,0 +1,60 @@
+.footer
+  margin-top: 9vw
+  display: grid
+  height: 80vw
+  grid-template-areas: 'social' 'email' 'mobile' 'policy'
+  padding-bottom: 30px
+  grid-row-gap: 20px
+  @media (min-width: 640px)
+    margin-top: 2vw
+    height: 10vw
+    padding-left: 30px
+    text-align: left
+    width: 60vw
+    grid-row-gap: 10px
+    grid-template-areas: 'social social' 'mobile mobile' 'email policy'
+
+.social
+  grid-area: social
+  margin-top: 15vw
+  margin-bottom: 10vw
+  @media (min-width: 640px)
+    margin: 0
+
+.mobile
+  grid-area: mobile
+
+.email
+  grid-area: email
+
+.policy
+  grid-area: policy
+
+.footerLink
+  font-size: 24px
+  font-weight: 400
+  color: white
+  line-height: 24px
+  text-decoration: none
+  transition: opacity .3s
+  opacity: 0.3
+  &.hidden
+    opacity: 0
+  &:hover
+    opacity: 1
+  @media (min-width: 640px)
+    font-size: 17px
+    line-height: 17px
+  @media (min-width: 1140px)
+    font-size: 17px
+    line-height: 17px
+
+.smallLink
+  font-size: 18px
+  line-height: 18px
+  @media (min-width: 640px)
+    font-size: 11px
+    line-height: 11px
+  @media (min-width: 1140px)
+    font-size: 18px
+    line-height: 24px

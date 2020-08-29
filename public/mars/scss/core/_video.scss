@@ -1,0 +1,63 @@
+// Обертка для адаптивного видео
+//	<div class="video__wrapper js-youtube" id="ID_VIDEO">
+//		iframe c youtube
+// </div>
+.video {
+	&__wrapper {
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 56.2%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		z-index: 1;
+
+		.video__prev,
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__prev {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 50%;
+		cursor: pointer;
+		// background-color: #f00;
+		width: 10.49em;
+		height: 10.55em;
+		box-shadow: 0.188em 0.313em 9.875em rgba(0, 0, 0, 0.53);
+		border: 0.5em solid #ffe983;
+		background-color: #ffffff;
+		transform: translate(-50%, -50%) scale(1);
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.3s;
+		font-size: 0.9em;
+
+		&:hover {
+			transform: translate(-50%, -50%) scale(1.1);
+		}
+
+		img {
+			width: 2.1em;
+			margin-right: -0.8em;
+		}
+	}
+}

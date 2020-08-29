@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# да блять. Планета огромная и не лезет в гит
+src/sections/Planet/planet.gif

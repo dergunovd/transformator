@@ -1,0 +1,433 @@
+.section {
+    &_theme_black {
+        background-color: #000;
+        color: #ffffff;
+    }
+    
+    &_background_draft-chairs {
+        @include desktop {
+            position: relative;
+            
+            &:before {
+                content: '';
+                position: absolute;
+                top: 67em;
+                left: -8em;
+                z-index: 1;
+                background-image: url('../img/room-draft-left.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 39em;
+                height: 43.9em;
+                opacity: -1.39;
+            }
+    
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 37em;
+                right: -7.6em;
+                z-index: 1;
+                background-image: url('../img/room-draft-right.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 34.556em;
+                height: 42.334em;
+                opacity: 0.55;
+            }
+        }
+    }
+
+    &_background_furniture {
+        @include desktop {
+            position: relative;
+            
+            &:before {
+                content: '';
+                position: absolute;
+                top: -7em;
+                left: 0em;
+                z-index: 1;
+                background-image: url('../img/furniture-left.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 19em;
+                height: 34.5em;
+                // opacity: -1.39;
+            }
+    
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -4em;
+                right: 2.8em;
+                z-index: 1;
+                background-image: url('../img/furniture-right.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 13.575em;
+                height: 17.563em;
+                // opacity: 0.55;
+            }
+        }
+    }
+
+    &_background_drafts {
+        @include desktop {
+            position: relative;
+            
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -4.6em;
+                left: -0.2em;
+                z-index: 0;
+                background-image: url('../img/drafts-left.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 17.113em;
+                height: 22.425em;
+                // opacity: -1.39;
+            }
+    
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -18.1em;
+                right: 0em;
+                z-index: 0;
+                background-image: url('../img/drafts-right.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 23.988em;
+                height: 38em;
+                // opacity: 0.55;
+            }
+        }
+    }
+
+    &_on-top {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        font-family: "SF Pro Display", sans-serif;
+        font-size: 2.5em;
+        font-weight: 700;
+        line-height: 1.4em;
+        letter-spacing: 0.001em;
+        
+        @include desktop {
+            font-size: 4.1em;
+            line-height: 1.3em;
+            letter-spacing: inherit;
+
+        }
+        
+        &_style_center {
+            text-align: left;
+
+            .video-editing & {
+                text-align: center;
+            }
+
+            @include desktop {
+                text-align: center;
+            }
+        }
+        
+        &_style_margin {
+            margin-right: 1em;
+
+            @include desktop {
+                margin-right: 0;
+                margin-left: 1.4em;
+            }
+        }
+    }
+    
+    &__heading {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1.4em;
+        max-width: 15em;
+        max-width: 15em;
+        margin-top: 1.6em;
+        letter-spacing: -0.03em;
+        word-spacing: 0.09em;
+        
+        @include desktop {
+            font-size: 3.5em;
+            margin-top: 0.5em;
+            margin-left: 3.2em;
+
+        }
+
+        &_align_center {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        font-family: "SF Pro Display", sans-serif;
+        font-weight: 700;
+        font-size: 2.1em;
+        line-height: 1em;
+        letter-spacing: -0.06em;
+
+        
+        @include desktop {
+            font-size: 2.938em;
+        }
+        
+        &_align_center-sm {
+            text-align: center;
+
+            @include desktop {
+                text-align: left;
+            }
+        }
+
+        &_style_big-sm {
+            font-size: 2.5em;
+            letter-spacing: 0;
+
+            @include desktop {
+                font-size: 2.938em;
+                letter-spacing: -0.06em;
+            } 
+        }
+    }
+
+    &__caption {
+        font-family: 'GentlemensScript', sans-serif;
+        color: rgba(0, 0, 0, 0.46);
+        font-size: 1.7em;
+        line-height: 0.83em;
+        position: absolute;
+
+        &_rotate_left-5{
+            transform: rotate(-5deg);
+            bottom: 1.4em;
+            left: 4.3em;
+
+            @include desktop {
+                bottom: 0.4em;
+                left: 5.1em;
+            }
+        }
+
+        &_rotate_left-15{
+            transform: rotate(-15deg);
+            bottom: 0.7em;
+            left: 4.1em;
+
+            @include desktop {
+                left: 4.6em;
+            }
+        }
+
+        &_margin-l{
+            bottom: 1.7em;
+            left: 6.7em;
+            @include desktop {
+                bottom: 0.9em;
+                left: 8.4em;
+            }
+        }
+
+        &_rotate_left-17{
+            transform: rotate(-17deg);
+            bottom: 0.3em;
+            left: 5.2em;
+        }
+
+        &_rotate_right-13{
+            transform: rotate(13deg);
+            bottom: 0.4em;
+            left: 3.4em;
+
+            @include desktop {
+                left: 4em;
+            }
+        }
+
+        &-title{
+            color: #000;
+            font-size: 1.3em;
+            line-height: 1.1em;
+            
+            @include desktop {
+                line-height: 0.9em;
+            }
+
+            &_span-sm{
+                display: inline;
+                margin-right: 0.4em;
+
+                @include desktop {
+                    margin-right: 0;
+                    display: block;
+                }
+            }
+        }
+        
+        &_style_floating-top {
+            transform: rotate(-8deg);
+            top: 13.3em;
+            left: 5.1em;
+
+            @include desktop {
+                transform: rotate(-6deg);
+                top: -1.2em;
+                left: 7.1em;
+            }
+        }
+
+        &_style_floating-bottom {
+            transform: rotate(11deg);
+            bottom: 1.6em;
+            left: 2.1em;
+
+            @include desktop {
+                transform: rotate(0deg);
+                bottom: 1.5em;
+                left: -6.9em;
+            }
+        }
+
+        &_style_sm {
+            bottom: 1.3em;
+            left: 2.7em;
+
+            @include desktop {
+                max-width: 5em;
+                bottom: -0.7em;
+                left: 10.7em;
+            }
+        }
+    }
+
+    &__line {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            transform: rotate(120deg);
+            background: url(../img/line-circle.png) no-repeat 0 0;
+            background-size: contain;
+        }
+        
+        &_before {
+            &:before {
+                width: 2.5em;
+                height: 3em;
+                top: -1.7em;
+                left: -2.5em;
+
+                @include desktop {
+                    top: -1.7em;
+                    left: -2.8em;
+                }
+            }
+        }
+
+        &_before-sm {
+            &:before {
+                background: url("../img/line-flat.png") no-repeat 0 0;
+                background-size: contain;
+                width: 1.233em;
+                height: 1.9em;
+                top: -1.1em;
+                left: -0.6em;
+                transform: rotate(-6deg);
+                
+                @include desktop {
+                    left: -0.6em;
+                }
+            }
+        }
+        &_before-reverse {
+            &:before {
+                width: 2em;
+                height: 3em;
+                top: -1.8em;
+                left: -1.9em;
+
+                @include desktop {
+                    top: 0em;
+                    left: -2.6em;
+                    transform: rotate(220deg);
+
+                }
+            }
+        }
+
+        &_after {
+            &:before {
+                width: 1.7em;
+                height: 2.1em;
+                top: -1em;
+                left: 0.2em;
+                transform: rotate(25deg);
+
+                @include desktop {
+                    top: -1.85em;
+                    width: 2.5em;
+                    height: 3em;
+                    left: 0.7em;
+                }
+            }
+        }
+
+        &_after-lg {
+            &:before {
+                width: 2.5em;
+                height: 2.9em;
+                top: -2.7em;
+                left: -3em;
+                transform: rotate(75deg);
+                background: url("../img/line-round.png") 0 0 no-repeat;
+                background-size: contain;
+                
+                @include desktop {
+                    transform: rotate(0deg);
+                    top: -2.5em;
+                    left: 0.6em;
+                    width: 3.563em;
+                    height: 2.813em;
+                }
+            }
+        }
+
+        &_rotate_right {
+            &:before {
+                top: -1.25em;
+                left: 0.75em;
+                transform: rotate(45deg);
+                width: 2.5em;
+                height: 3em;
+                
+                @include desktop {
+                    top: -1.3em;
+                    left: 1.15em;
+                }
+            }
+        }
+
+        &_rotate-left {
+            &:before {
+                left: -0.7em;
+                top: -1.2em;
+                
+                @include desktop {
+                    left: -1.4em;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

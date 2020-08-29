@@ -1,0 +1,27 @@
+.voice-acting {
+  padding-bottom: 10.8em;
+  text-align: left;
+  
+  @include desktop {
+    padding-bottom: 6em;
+    text-align: center;
+  }
+  
+  &__slider {
+      margin-top: 3em;
+
+      @include desktop {
+        margin-top: 4.5em;
+      }
+  }
+
+  &__text {
+    font-size: 1.3em;
+    line-height: 1.3em;
+
+    @include desktop {
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+}

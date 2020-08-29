@@ -1,0 +1,140 @@
+.tasks{
+	padding-top: 3em;
+	padding-bottom: 5.5em;
+	position: relative;
+	@media (max-width: 767px) {
+		padding: 2em 0;
+	}
+	&__detail{
+		position: absolute;
+		top: -37.42em;
+		left: -33.21em;
+		width: 55.4em;
+		height: 97.65em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+			width: 25.4em;
+			height: 67.65em;
+			left: -19.21em;
+			top: -26.42em;
+		}
+	}
+	&__container{
+		max-width: 81em;
+		width: 100%;
+		padding: 0 0.95em;
+		margin: 0 auto;
+		position: relative;
+		z-index: 3;
+	}
+	&__title{
+		text-align: center;
+		color: #000000;
+		font-family: "Muller";
+		font-size: 3.17em;
+		font-weight: 800;
+		line-height: 1.375em;
+		@media (max-width: 767px) {
+			font-size: 1.75em;
+		}
+	}
+	&__set{		
+		counter-reset: tasks;
+		display: flex;
+		justify-content: center;
+		margin-left: -15px;
+		@media (max-width: 767px) {	
+			flex-direction: column;
+		}
+	}
+	&__item{
+		padding-left: 15px;
+		padding-top: 2em;
+		display: flex;
+		align-items: flex-end;
+		color: #000000;
+		font-family: 'Raleway';
+		font-weight: 300;
+		line-height: 1.31em;
+		@media (max-width: 767px) {
+			padding-top: 1.6em;
+			width: 100%;
+			padding-right: 0;
+			justify-content: center;
+		}
+		&:before{
+			counter-increment: tasks;
+	    	content: counter(tasks);
+			color: #0244cf;
+			font-family: "Carbon2";
+			font-size: 7.71em;
+			line-height: 0.7em;
+			font-weight: 700;
+			padding-right: 0.21em;
+			@media (max-width: 767px) {
+				padding-right: 0.3em;
+				font-size: 8.84em;
+				text-align: center;
+			}
+		}
+		&-text{
+			font-size: 1em;
+			max-width: 12em;
+			padding-bottom: 0.9em;
+			@media (max-width: 767px) {
+				font-size: 1.12em;
+				padding-bottom: 1em;
+			}
+		}
+	}
+	&__vegetables{
+		position: absolute;
+		z-index: 2;
+		width: 45.2em;
+		height: 85.8em;
+		left: -31.21em;
+   		top: -38em;
+    	object-fit: contain;
+		@media (max-width: 767px) {
+	    	display: none;
+		}
+		&-mob{
+			display: none;
+			position: absolute;
+			z-index: 2;
+			width: 14.1em;
+		    height: 24.21em;
+		   	right: -10.4em;
+		    top: 13em;
+	    	object-fit: contain;
+	    	@media (max-width: 767px) {
+		    	display: block;
+			}
+		}
+	}
+	&__pack{
+	    top: 7em;
+	    left: 10em;
+	    z-index: 2;
+	    position: absolute;
+	    width: 15em;
+	    height: 20.95em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+	    	display: none;
+		}
+		&-mob{
+			display: none;
+			position: absolute;
+			z-index: 2;
+			width: 6.2em;
+		    height: 12.5em;
+		   	left: 0;
+		    top: 7em;
+	    	object-fit: contain;
+	    	@media (max-width: 767px) {
+		    	display: block;
+			}
+		}   
+	}
+}

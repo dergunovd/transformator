@@ -1,0 +1,216 @@
+extends layout/layout.pug
+
+block content
+    // begin home
+    section#home.home.section.parallaxBox
+        .container_center
+            h1.home__title ДОКУМЕНТАЛЬНЫЙ ФИЛЬМ
+            .home__content
+                .home__top Making of
+                .home__logo
+                    img(src="img/mars.svg", alt="")
+                .home__action
+                    i.home__play(data-toggle="modal" data-target="#previwe")
+                        img(src="img/play.svg", alt="")
+                    span Посмотреть трейлер
+
+            // begin tasks
+            .tasks
+                .tasks__title Задачи
+                .tasks__list
+                    .tasks__item Рассказать о компании «MARS», которая является крупнейшим налоговым резидентом России
+                    .tasks__item Показать масштабы производства
+                    .tasks__item Показать корпоративную <br>культуру компании
+
+            // end tasks
+
+        img.home__astro.parallaxMouse(src="img/asronavt.png", alt="" data-speed="1")
+        img.home__meteor.parallaxMouse(src="img/meteor-blure.png", alt="" data-speed="-0.8")
+        img.home__meteors.parallaxMouse(src="img/meteors.png", alt="" data-speed="-0.5")
+
+    // end home
+
+    // begin research
+    section#research.research.section.parallaxBox
+        .container_center
+            h2.section__title Изучение архивных материалов
+            .research__content
+                each item in [1, 2, 3, 4, 5, 6, 7]
+                    img.research__img.wow(src="img/research-"+item+".png", alt="")
+
+            .research__bottom Компания "MARS" инвестировала более $2 млрд в экономику России
+
+        img.research__cup.parallaxMouse(src="img/cup.png", alt="" data-speed="0.3")
+        img.research__cupblur.parallaxMouse(src="img/cup-blur.png", alt="" data-speed="-0.2")
+        img.research__left.parallaxMouse(src="img/research-left.png", alt="" data-speed="-1")
+        img.research__right.parallaxMouse(src="img/research-right.png", alt="" data-speed="1.5")
+
+    // end research
+
+    // begin manufacture
+    section#manufacture.manufacture.section.parallaxBox
+        .container_center
+            h2.section__title Для реализации <span>поставленных задач</span>, <br>решили отправиться на производство <br>и в головной офис компании
+            h3.section__sub С представителями компании "MARS" мы заранее <br>обговорили, какие локации и герои нам понадобятся
+            img.manufacture__content.parallaxMouse(src="img/manufacture.jpg", alt="" data-speed="0.5")
+            .manufacture__descr Завод "MARS" в Ступино <br>Площадь: 30 Га <br>Штат: 1000 человек
+
+        img.manufacture__left.parallaxMouse(src="img/birds.png", alt="" data-speed="2")
+        img.manufacture__right.parallaxMouse(src="img/birds.png", alt="" data-speed="1.7")
+
+    // end manufacture
+
+    // begin forShooting
+    section#forShooting.forShooting.section.parallaxBox
+        h2.section__title Отправляемся на съемки
+        .forShooting__row.snickers
+            .forShooting__product
+                img(src="img/snickers.png", alt="")
+            .forShooting__prev
+                img.parallaxMouse(src="img/snickers-1.png", alt="" data-speed="1")
+                img.parallaxMouse(src="img/snickers-2.png", alt="" data-speed="0.5")
+            .forShooting__first Первый батончик был сделан в 1923 году
+
+            .forShooting__img
+                img.wow(src="img/snickers-photo-1.png", alt="")
+                img.wow(src="img/snickers-photo-2.png", alt="")
+                img.wow(src="img/snickers-photo-3.png", alt="")
+                .forShooting__descr С 1995 года в России сделано более 23 млрд батончиков
+
+        .forShooting__row.whiskas
+            .forShooting__prev
+                img.parallaxMouse(src="img/whiskas-1.png", alt="" data-speed="-1")
+            .forShooting__product
+                img.desktop(src="img/whiskas.png", alt="")
+                img.mobile(src="img/whiskas-logo.png", alt="")
+            .forShooting__first Первая упаковка была сделана в 1958 году
+
+            .forShooting__img
+                img.wow(src="img/whiskas-photo-1.png", alt="")
+                img.wow(src="img/whiskas-photo-2.png", alt="")
+                img.wow(src="img/whiskas-photo-3.png", alt="")
+
+        .forShooting__row.mms
+
+            .forShooting__product
+                img.desktop(src="img/mms.png", alt="")
+                img.mobile(src="img/mms-mob.png", alt="")
+            .forShooting__first Первая пачка драже была сделана в 1941 году
+            .forShooting__prev
+                img.parallaxMouse.desktop(src="img/mms-1.png", alt="" data-speed="1")
+                img.parallaxMouse(src="img/mms-2.png", alt="" data-speed="1.5")
+
+            .forShooting__img
+                img.wow(src="img/mms-photo-1.png", alt="")
+                img.wow(src="img/mms-photo-2.png", alt="")
+                img.wow(src="img/mms-photo-3.png", alt="")
+                .forShooting__descr Каждая конфета покрыта 35 слоев глазури
+
+        .forShooting__row.dolmio
+            .forShooting__product
+                img(src="img/dolmino.png", alt="")
+            .forShooting__first Первая банка была сделана в 1989 году
+            .forShooting__prev
+                img.parallaxMouse(src="img/dolmino-1.png", alt="" data-speed="-0.2")
+
+            .forShooting__img
+                img.wow(src="img/dolmino-photo-1.png", alt="")
+                img.wow(src="img/dolmino-photo-2.png", alt="")
+                img.wow(src="img/dolmino-photo-3.png", alt="")
+
+    // end forShooting
+
+    // begin office
+    section#office.office.section.parallaxBox
+        .container_center
+            h2.section__title Головной офис
+            .office__content
+                img.wow(src="img/office-1.png", alt="")
+                img.wow(src="img/office-2.png", alt="")
+                img.wow(src="img/office-3.png", alt="")
+            .office__owner Президент компании «MARS» в России
+
+        .office__nuts
+            img.parallaxMouse.desktop(src="img/nuts-1.png", alt="" data-speed="1")
+            img.parallaxMouse.desktop(src="img/nuts-2.png", alt="" data-speed="-1")
+            img.parallaxMouse.mobile(src="img/nuts-3.png", alt="" data-speed="-1")
+
+
+    // end office
+
+    // begin concept
+    section#concept.concept.section.parallaxBox
+        .concept__bg
+            img.parallaxMouse(src="img/concept-nuts.png", alt="" data-speed="0.3")
+        .concept__image
+            img.parallaxMouse(src="img/concept-snickers.png", alt="" data-speed="1")
+            img.parallaxMouse(src="img/concept-twix.png", alt="" data-speed="-1")
+            img.parallaxMouse(src="img/concept-mars.png", alt="" data-speed="0.6")
+            img.parallaxMouse(src="img/concept-bounty.png", alt="" data-speed="-0.7")
+        .container_center
+            .concept__top
+                img.desktop(src="img/concept-logo.png", alt="")
+                img.mobile(src="img/concept-logo-mob.png", alt="")
+            h2.section__title Пять принципов "MARS", <br>которые нам требовалось отразить в выпуске
+            .concept__list
+                .concept__item
+                    .concept__in
+                        .concept__name Качество
+                        .concept__text Потребитель – это наш босс, качество – это суть нашей работы, а хороший товар по доступной цене – вот наша цель
+                .concept__item
+                    .concept__in
+                        .concept__name Ответственность
+                        .concept__text Как личности, мы требуем полной ответственности от самих себя. Как сотрудники, мы несем ответственность и за то, что делают другие
+                .concept__item
+                    .concept__in
+                        .concept__name Взаимовыгодность
+                        .concept__text Взаимная выгода — это общая выгода, а общая выгода поможет выдержать испытание временем
+                .concept__item
+                    .concept__in
+                        .concept__name Эффективность
+                        .concept__text Мы полностью используем наши ресурсы, не растрачиваемся попусту и занимаемся только тем, что мы можем делать очень хорошо
+                .concept__item
+                    .concept__in
+                        .concept__name Свобода
+                        .concept__text Нам нужна свобода, чтобы строить своё будущее. Нам нужна прибыль, чтобы оставаться свободными
+
+    // end concept
+
+    // begin final
+    section#final.final.section
+        .container_center
+            h2.section__title Финальный ролик
+            .final__video
+                .video__wrapper
+                    #video
+                .video__play
+                    img(src="img/play.svg", alt="")
+
+    // end final
+
+    // begin review
+    section#review.review.section.parallaxBox
+        .review__bg
+            img.parallaxMouse(src="img/review-bg.png", alt="" data-speed="0.5")
+        .container_center
+            h2.section__title Отзыв
+            .review__content
+                .review__left
+                    img(src="img/review.png", alt="")
+                .review__right
+                    .review__name Иван Иванович
+                    .review__prof Генеральный директор компании «MARS»
+                    .review__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque 
+
+    // end review
+
+    //- // Button trigger modal previwe
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#previwe") Click to open modal
+    // Begin Modal previwe
+    .modal.fade.previwe#previwe
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .video__wrapper
+                #short-video
+
+    // End modal previwe

@@ -1,0 +1,41 @@
+.button
+  font-weight: 600
+  font-size: 13px
+  line-height: 19px
+  color: white
+  box-shadow: 0 0 40px 1px rgba(255, 106, 173, 1)
+  border-radius: 17px
+  background: #ff0072 radial-gradient(circle at center -60px, #fff, transparent)
+  height: 69px
+  width: 260px
+  text-transform: uppercase
+  border: none
+  cursor: pointer
+  &:disabled
+    color: #ccc
+    background-color: #ececec
+    box-shadow: 0 0 40px 1px rgba(236, 236, 236, 1)
+  @media (min-width: 1140px)
+    height: 72px
+    width: 288px
+    font-size: 15px
+    line-height: 21px
+  @media (min-width: 1360px)
+    font-size: 19px
+    line-height: 26px
+    height: 90px
+    width: 360px
+  &:hover
+    box-shadow: 0 0 60px 1px rgba(255, 106, 173,1)
+    &:disabled
+      cursor: not-allowed
+      box-shadow: 0 0 40px 1px rgba(236, 236, 236, 1)
+  &:active
+    background: #ff0072
+  &.secondary
+    box-shadow: 0 0 89px 1px rgba(79, 76, 200, 0.42)
+    background: #4f4cc8 radial-gradient(circle at center -60px, #fff, transparent)
+    &:hover
+      box-shadow: 0 0 60px 1px rgba(79, 76, 200, 0.42)
+    &:active
+      background: #4f4cc8

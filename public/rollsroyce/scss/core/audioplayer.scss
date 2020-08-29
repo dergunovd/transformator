@@ -1,0 +1,94 @@
+.audioplayer {
+    display: flex;
+    align-items: center;
+    font-size: 1.9em;
+    margin: 1.1em 0 0.9em;
+
+    @media (min-width: 767px) {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    &-stopped {}
+
+    &-playpause {
+        width: 1.1em;
+        height: 1.2em;
+        flex: none;
+        color: $main_color;
+        text-decoration: none;
+        background: url("../img/played.svg") 0 0 no-repeat;
+        background-size: contain;
+        cursor: pointer;
+
+        [title="Play"] {}
+
+        a {
+            font-size: 0;
+        }
+
+        &[title="Pause"] {
+            background-image: url("../img/pause.svg");
+        }
+    }
+
+    &-time {
+        &-current {
+            order: 10;
+            color: $color_primary;
+            font-size: 1.125em;
+            font-weight: 400;
+            line-height: 1.67;
+            letter-spacing: -0.017em;
+        }
+
+        &-duration {
+            display: none;
+        }
+    }
+
+    &-bar {
+        position: relative;
+        width: 15.62em;
+        height: 0.125em;
+        margin: 0 0 0 2.6em;
+        border-radius: 0.063em;
+        background-color: $color_seccondary;
+        cursor: pointer;
+
+        @media (min-width: 768px) {
+            width: 16.82em;
+            margin: 0 1.7em 0 2.6em;
+        }
+
+        &-loaded {}
+
+        &-played {
+            position: relative;
+            background-color: rgba($main_color, .5);
+            height: 2px;
+            width: 0;
+
+            &:after {
+                $bw: 1.5em;
+                content: '';
+                position: absolute;
+                display: block;
+                right: -($bw/2);
+                top: -($bw/2);
+                width: $bw;
+                height: $bw;
+                border-radius: ($bw/2);
+                background-color: $main_color;
+            }
+        }
+    }
+
+    &-volume {
+        display: none;
+
+        &-button {}
+
+        &-adjust {}
+    }
+}

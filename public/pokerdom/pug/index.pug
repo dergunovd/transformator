@@ -1,0 +1,195 @@
+extends layout/layout.pug
+
+block content
+    // begin home
+    section#home.home.section.parallaxBox
+        .home__bg
+        .home__content
+            .home__sub Making of
+            .home__title
+                img(src="img/logo.png", alt="")
+            .home__sub Рекламный ролик
+
+        img.parallaxItem.pieces(src="img/fishka-1.png", alt=""  data-speed="3")
+        img.parallaxItem.pieces-sm(src="img/fishka-2.png", alt=""  data-speed="1")
+        img.parallaxItem.cart(src="img/carts.png", alt=""  data-speed="8")
+
+    // end home
+
+    // begin task
+    section#task.task.section.parallaxBox
+        .task__content
+            .task__left
+                img.task__shadow(src="img/shadow.png", alt="")
+                img.task__book(src="img/book.png", alt="")
+                img.task__rad(src="img/task-radial.png", alt="")
+            .task__right
+                h2.section__title 
+                    span Задача:
+                .task__sub Разработка креативного, продающего видео-ролика для YouTube формата.
+                h3.section__sub Первое, что мы сделали – изучили правила игры в покер.
+
+        img.parallaxItem.pieces(src="img/fishka-3.png", alt=""  data-speed="3")
+
+    // end task
+
+    // begin solution
+    section#solution.solution.section
+        h2.section__title.section__title_center Мы решили сделать ролик в стиле Америки 60х
+        .solution__content
+            //- img.solution__dark(src="img/solution-dark.jpg", alt="")
+            //- img.solution__light(src="img/solution-light.jpg", alt="")
+            .solution__left
+                img(src="img/man.png", alt="")
+                img(src="img/man-light.png", alt="")
+
+            .solution__center
+                img(src="img/desk.png", alt="")
+                img(src="img/desk-light.png", alt="")
+                img.solution__desk(src="img/solution-desk.png", alt="")
+                img.solution__desk.anim(src="img/solution-desk-light.png", alt="")
+
+            .solution__right
+                img.solution__lamp(src="img/lamp.png", alt="")
+                img.solution__lampLight.solution__lampLight_first(src="img/lamp-light-2.png", alt="")
+                img.solution__lampLight.solution__lampLight_second(src="img/lamp-light.png", alt="")
+                img.solution__list(src="img/check-list.png", alt="")
+                img.solution__list(src="img/check-list-light.png", alt="")
+
+        .solution__smoke
+            img(src="img/smoke-left.png", alt="")
+            img(src="img/smoke-right.png", alt="")
+
+
+    // end solution
+
+    // begin scenario
+    section#scenario.scenario.section.parallaxBox
+        .scenario__content
+            h2.section__title Написали крутой сценарий
+            h3.section__sub Мы хотели связать историю игры в покер <br>с современным приложением Poker Dom 
+            .scenario__man
+                img(src="img/sceenario.png", alt="")
+        .scenario__paper
+            img.parallaxMouse(src="img/paper-sm.png", alt=""  data-speed="2")
+            img.parallaxMouse(src="img/paper-lg.png", alt=""  data-speed="8")
+
+    // end scenario
+
+    // begin preparation
+    section#preparation.preparation.section
+        .preparation__content
+            h2.section__title.section__title_center Подготовили раскадровку будущего ролика
+            .preparation__cams
+                //- img(src="img/cams.png", alt="")
+                .preparation__slider
+                    .preparation__cadr
+                        img(src="img/cadr.png", alt="")
+                    .preparation__cadr
+                        img(src="img/cadr.png", alt="")
+
+            img.preparation__pulse(src="img/camera-light.png", alt="")
+
+    // end preparation
+
+    // begin heroes
+    section#heroes.heroes.section.parallaxBox
+        .container_center
+            h2.section__title.section__title_center Чтобы передать атмосферу 60х нужна подходящая локация, а главное – герои
+            h3.section__sub Мы проверили кастинг среди 37 актеров, <br>чтобы выбрать четырех настоящих гагстеров
+            .heroes__slider
+                .heroes__item
+                    img(src="img/hero1.png", alt="")
+                .heroes__item
+                    img(src="img/hero2.png", alt="")
+                .heroes__item
+                    img(src="img/hero3.png", alt="")
+                .heroes__item
+                    img(src="img/hero3.png", alt="")
+
+        img.parallaxItem(src="img/fishka-4.png", alt=""  data-speed="3")
+
+    // end heroes
+
+    // begin studio
+    section#studio.studio.section
+        img.studio__ellips(src="img/studio-elipse.png", alt="")
+        .container_center
+            h2.section__title.section__title_center В качестве локации мы арендовали студию
+            h3.section__sub и превратили ее в настоящее подпольное казино с блэк джеком <br>и  шлю  гангстерами
+            .studio__list
+                .studio__item
+                    img(src="img/study1.png", alt="")
+                .studio__item
+                    img(src="img/study2.png", alt="")
+                .studio__item
+                    img(src="img/study3.png", alt="")
+
+            .studio__debris
+                img.parallaxItem(src="img/debris-left.png", alt="" data-speed="5")
+                img.parallaxItem(src="img/debris-left.png", alt="" data-speed="3")
+                img.parallaxItem(src="img/debris-buttle.png", alt="" data-speed="1")
+                img.parallaxItem(src="img/debris-right.png", alt="" data-speed="4")
+
+            .studio__descr
+                .studio__text.mobile
+                    h4 Вы думаете, съемки прошли гладко и всё было по плану? Как бы ни так...
+                    span Но мы научились выходить из таких ситуаций красиво
+
+                .studio__buttle
+                    img(src="img/buttle.png", alt="")
+                .studio__text
+                    h4.desktop Вы думаете, съемки прошли гладко и всё было по плану? Как бы ни так...
+                    span.desktop Но мы научились выходить из таких ситуаций красиво
+                    p Это бутылка из сахара. Используется в качестве реквизита на съемках для замены стеклянной бутылки
+                        img.studio__arrow(src="img/studio-arrow.png", alt="")
+                    h4 Преимущества:
+                    ol
+                        li легче стеклянной бутылки
+                        li менее прочная
+                        li внешне никак не отличается от стекла
+                    h4 Недостатки:
+                    ol
+                        li если нужно разбить бутылку о голову, то наносить удар необходимо только средней частью. Ни в коем случае не бить донышком бутылки! Иначе боль будет, как при ударе от обычной бутылки
+
+            .section__sub Теперь догадываетесь, почему удар бутылкой о голову быль столь реалистичным? А ведь мы говорили, бей по нему только средней частью бутылки...
+
+    // end studio
+
+    // begin effects
+    section#effects.effects.section.parallaxBox
+        .container_center
+            h2.section__title.section__title_center Добавили компьютерную графику для динамичности ролика
+            .effects__content
+                .effects__img
+                    img(src="img/Pocker_безCG.gif", alt="")
+                .effects__img
+                    img(src="img/Pocker_CG.gif", alt="")
+
+        img.parallaxItem(src="img/fishka-5.png", alt=""  data-speed="3")
+
+    // end effects
+
+    // begin rezultat
+    section#rezultat.rezultat.section
+        .rezultat__content
+            h2.section__title.section__title_center Посмотрите, что у нас получилось
+            //- .rezultat__wrap#video
+
+            img.rezultat__sinema(src="img/sinema.png", alt="")
+            .rezultat__video
+                #video
+                //- img.video__prev(src="img/film-poster.png", alt="")
+                .rezultat__wrap
+
+                    .rezultat__full
+
+    // end rezultat
+
+    // Begin Modal videoModal
+    .modal.fade.videoModal#videoModal
+        .modal-dialog
+            .modal-content
+                a.rezultat__close(href="#" data-dismiss="modal")
+
+    // End modal videoModal

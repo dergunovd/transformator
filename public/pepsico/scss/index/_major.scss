@@ -1,0 +1,159 @@
+.major{
+	position: relative;
+	overflow: hidden;
+	&__background{
+		width: 100%;
+		display: block;
+		@media (max-width: 767px) {
+			width: 366%;
+			margin-left: -39em;
+		}
+	}
+	&__logotype{
+		position: absolute;
+	    left: -126.94em;
+	    top: -37.74em;
+	    width: 358em;
+	    height: 114.4em;
+	    object-fit: contain;
+	    z-index: 2;
+	    @media (max-width: 767px) {
+		    left: -1.6em;
+		    top: -9.5em;
+		    width: 33em;
+		    height: 34em;
+	    }
+	}
+	&__bank{
+		position: absolute;
+		top: 13.32em;
+		left: 46.45em;
+		width: 26.55em;
+		height: 31.9em;
+		object-fit: contain;
+		z-index: 3;
+		@media (max-width: 767px) {
+		    top: 10em;
+		    left: -2em;
+		    width: 33.55em;
+		    height: 30.9em;
+		}
+	}
+	&__water{
+		&-left{
+			position: absolute;
+			top: -31.02em;
+			left: -18.9em;
+			width: 51em;
+			height: 83.4em;
+			object-fit: contain;
+			@media (max-width: 767px) {
+			    top: -14.2em;
+			    left: -16.7em;
+			    width: 29em;
+			    height: 41.6em;
+			}
+		}
+		&-right{
+			position: absolute;
+		    top: 21.51em;
+    		right: -14.24em;
+			width: 40.2em;
+			height: 37.6em;
+			object-fit: contain;
+			@media (max-width: 767px) {
+			    top: 24.51em;
+			    right: -20.24em;
+			    width: 34.2em;
+			    height: 44.6em;
+			}
+		}
+	}
+	&__container{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+	}
+	&__title{
+		position: absolute;
+		right: 11em;
+		top: 8em;
+		color: #ffffff;
+		font-family: 'Raleway';
+		font-weight: 300;
+		font-size: 2.0625em;
+		@media (max-width: 767px) {
+			font-size: 1.6em;
+	        top: 3.5em;
+    		right: 1em;
+		}
+	}
+	&__play{
+		text-decoration: none;
+		position: absolute;
+		left: 26em;
+		top: 13em;
+		display: flex;
+		align-items: center;
+		@media (max-width: 767px) {
+			top: auto;
+		    bottom: 3em;
+    		left: 3.5em;
+		}
+		&-knob{
+			border-radius: 50%;
+			overflow: hidden;
+			cursor: pointer;
+			width: 6.838em;
+			height: 6.838em;
+			position: relative;
+			&:hover{
+				.major__play-detail path{
+					fill: #005993;
+				}
+			}
+			@media (max-width: 767px) {
+				width: 5.55em;
+				height: 5.55em;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			
+		}
+		&-detail{
+			position: absolute;
+			width: 1.5em;
+			height: 1.75em;
+			left: 2.8em;
+			top: 2.75em;
+			@media (max-width: 767px) {
+				width: 1.3em;
+			    height: 1.5em;
+			    left: 2.3em;
+    			top: 2.1em;
+			}
+			path{
+				transition: all .5s;
+				fill: #ff1717;
+			}
+		}
+		&-text{
+			max-width: 7.4em;
+			padding-left: 1.02em;
+			color: #ffffff;
+			font-family: 'Raleway';
+			font-weight: 300;
+			font-size: 1.1em;
+			line-height: 1.3em;
+			@media (max-width: 767px) {
+				font-size: 1.1em;
+				padding-left: 0.85em;
+			}
+		}
+	}
+}

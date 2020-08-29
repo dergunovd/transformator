@@ -1,0 +1,176 @@
+.searching {
+    position: relative;
+    background: url("../img/searching-bg.jpg") top center no-repeat;
+    background-size: 100% 100%;
+    padding-top: 0;
+    margin-top: -1em;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        margin-top: -8em;
+        padding-top: 7.7em;
+    }
+
+    .container_center {
+        position: static;
+    }
+
+    .section {
+        &__sub {}
+
+        &__title {
+            position: relative;
+            z-index: 10;
+
+            @media (min-width: 768px) {
+                max-width: 20em;
+            }
+        }
+
+    }
+
+    &__content {
+        height: 44em;
+
+        @media (min-width: 768px) {
+            height: 80em;
+        }
+
+        img {
+            position: absolute;
+            // opacity: 0;
+
+            &.animated {
+                animation: 1s slideUp;
+                opacity: 1;
+            }
+
+            &:first-child {
+                right: -16.2em;
+                top: 15.8em;
+                width: 38.8em;
+
+                @media (min-width: 768px) {
+                    right: -3.6em;
+                    top: 11.3em;
+                    width: 67.4em;
+                }
+            }
+
+            &:nth-child(2) {
+                top: 33.5em;
+                right: -9em;
+                width: 21.2em;
+
+                // display: none;
+
+                @media (min-width: 768px) {
+                    top: 41.7em;
+                    right: 9.7em;
+                    width: 36.5em;
+                }
+            }
+
+            &:nth-child(3) {
+                top: 23.6em;
+                left: -5.3em;
+                width: 27.3em;
+                // display: none;
+
+                @media (min-width: 768px) {
+                    top: 52.5em;
+                    left: 24.7em;
+                    width: 45.3em;
+
+                }
+            }
+
+            &:nth-child(4) {
+                top: 33.5em;
+                left: 14.4em;
+                width: 27.5em;
+                // display: none;
+
+                @media (min-width: 768px) {
+                    top: 41.4em;
+                    left: 46.9em;
+                    width: 47.2em;
+
+                }
+            }
+
+            &:nth-child(5) {
+                top: 20.5em;
+                left: 12.6em;
+                width: 14.9em;
+                // display: none;
+
+                @media (min-width: 768px) {
+                    top: 31.3em;
+                    left: 35.8em;
+                    width: 24.9em;
+
+                }
+            }
+
+            &:nth-child(6) {
+                top: 17.4em;
+                left: -2.9em;
+                width: 18.3em;
+                // display: none;
+
+                @media (min-width: 768px) {
+                    top: 25.4em;
+                    left: 8.5em;
+                    width: 31.3em;
+
+                }
+            }
+
+            &:nth-child(7) {
+                top: 45.4em;
+                right: -4.4em;
+                width: 16.3em;
+                // display: none;
+
+                @media (min-width: 768px) {
+                    top: 52.4em;
+                    right: -7.4em;
+                    width: 29.3em;
+                }
+            }
+
+            &:nth-child(8) {
+                top: 25.1em;
+                right: 5.7em;
+                width: 17.8em;
+                // display: none;
+                // opacity: 0;
+
+                &.animated {
+                    animation: 1.4s slideUpLg;
+                    opacity: 1;
+                }
+
+                @media (min-width: 768px) {
+                    top: 39.1em;
+                    right: 17.2em;
+                    width: 30.8em;
+                }
+            }
+
+            &:nth-child(9) {
+                top: 43.5em;
+                left: -4.7em;
+                width: 22em;
+                // display: none;
+
+                @media (min-width: 768px) {
+                    top: 57.3em;
+                    left: -12.7em;
+                    width: 36em;
+                }
+            }
+        }
+    }
+}

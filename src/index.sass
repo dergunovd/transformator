@@ -1,0 +1,115 @@
+@font-face
+  font-family: 'Muller'
+  src: url('./fonts/MullerLight.eot')
+  src: local('Muller Light'), local('MullerLight'),
+  url('./fonts/MullerLight.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/MullerLight.woff2') format('woff2'),
+  url('./fonts/MullerLight.woff') format('woff'),
+  url('./fonts/MullerLight.ttf') format('truetype')
+  font-weight: 300
+  font-style: normal
+
+@font-face
+  font-family: 'Muller'
+  src: url('./fonts/MullerExtraBold.eot')
+  src: local('Muller ExtraBold'), local('MullerExtraBold'),
+  url('./fonts/MullerExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/MullerExtraBold.woff2') format('woff2'),
+  url('./fonts/MullerExtraBold.woff') format('woff'),
+  url('./fonts/MullerExtraBold.ttf') format('truetype')
+  font-weight: 800
+  font-style: normal
+
+@font-face
+  font-family: 'Bebas Neue'
+  src: url('./fonts/BebasNeueRegular.eot')
+  src: local('Bebas Neue Regular'), local('BebasNeueRegular'),
+  url('./fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/BebasNeueRegular.woff') format('woff'),
+  url('./fonts/BebasNeueRegular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  font-family: 'Muller', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background: black
+  color: white
+  text-align: center
+  min-width: 320px
+
+main
+  background: url("background360.jpg") center top / 100%
+  overflow: hidden
+  position: relative
+  height: 1252vw
+  @media (min-width: 640px)
+    background: url("background960.jpg") center top / 100%
+    height: 446vw
+  @media (min-width: 1140px)
+    background: url("./background.jpg") center top / 100%
+    height: 337vw
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    bottom: -3vw
+    left: 0
+    width: 100vw
+    height: 105vw
+    background: url('./trf.gif') center top / cover no-repeat
+    @media (min-width: 640px)
+      left: 27.9vw
+      width: 88vw
+      height: 51.4vw
+      bottom: -1vw
+
+section
+  position: relative
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Bebas Neue', sans-serif
+  font-weight: 400
+  margin: 0
+
+
+a, button
+  cursor: pointer
+  &:focus
+    outline: none
+
+h2
+  font-size: 60px
+  font-weight: 400
+  margin: 0
+  line-height: 1
+  @media (min-width: 640px)
+    font-size: 72px
+  @media (min-width: 1140px)
+    font-size: 86px
+  @media (min-width: 1360px)
+    font-size: 128px
+
+h3
+  font-family: 'Muller', sans-serif
+  text-shadow: 0 22px 14px rgba(0, 0, 0, 0.5)
+  color: #c7c7c7
+  margin: 0 10px
+  text-align: center
+  opacity: 0.7
+  font-size: 18px
+  font-weight: 400
+  line-height: 20px
+  @media (min-width: 640px)
+    margin: 0 auto
+    font-size: 15px
+    line-height: 26px
+  @media (min-width: 1140px)
+    font-size: 24px
+    line-height: 37px
+

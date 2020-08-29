@@ -1,0 +1,57 @@
+.lead {
+    &__img {
+        margin: 2em 0 2.5em 0;
+
+        @include desktop {
+            margin: 1em 0 2.5em 0;
+        }
+    }
+
+    &__photo {
+        object-position: 0% 0%;
+        object-fit: cover;
+        width: 13.8em;
+        height: 16.7em;
+        
+        @include desktop {
+            width: 9.8em;
+            height: 11.9em;
+        }
+
+        &_rotate {
+            transform: rotate(-14deg);
+            object-position: 0% 0%;
+            object-fit: cover;
+            width: 14em;
+            height: 11.8em;
+            
+            @include desktop {
+                width: 9.2em;
+                height: 7.8em;
+            }
+        }
+    }
+
+    &__descr {
+        font-family: "Berlingske Sans", sans-serif;
+        font-size: 1.3em;
+        text-align: center;
+        
+        @include desktop {
+            font-size: inherit;
+            line-height: 1em;
+        }
+    }
+
+    &__title {
+        font-family: "SF Pro Display", sans-serif;
+        font-size: 2.2em;
+        font-weight: 700;
+        line-height: 1.8em;
+        
+        @include desktop {
+            line-height: 1.3em;
+            font-size: 1.9em;
+        }
+    }
+}

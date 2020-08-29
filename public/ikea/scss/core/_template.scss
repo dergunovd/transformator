@@ -1,0 +1,44 @@
+body {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	min-height: 100%;
+    letter-spacing: $main_letter_spacing;
+	font-size: 12px;
+	font-size: calc(0.0375 * 100vw + 0px);
+
+	@include desktop {
+		font-size: calc(.00937 * 100vw + 0px);
+	}
+
+}
+
+p {
+	margin-top: 15px;
+	margin-bottom: 22px;
+
+	.review & {
+		margin-bottom: 6px;
+	}
+
+	@include desktop {
+		margin-top: 15px;
+		margin-bottom: 35px;
+
+		.review & {
+			margin-bottom: 26px;
+		}
+	}
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+

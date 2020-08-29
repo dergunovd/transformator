@@ -1,0 +1,66 @@
+.review {
+    padding: 0 0em 8em;
+    font-size: 1.3em;
+    
+    @include desktop {
+        padding: 0 7em 8.9em;
+        font-size: inherit;
+    }
+
+    &__review {
+        max-width: 35em;
+        text-align: left;
+        margin-top: 2.6em;
+    }
+
+    &__text {
+        margin: 0 1em;
+        line-height: 1.3em;
+
+        @include desktop {
+           line-height: inherit;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        font-size: 0;
+        line-height: 0;
+        @include desktop {
+            width: 62%;
+        }
+    }
+    
+    &__lead {
+        position: relative;
+        margin-top: 1.5em;
+        font-size: 0.8em;
+        
+        @include desktop {
+            max-width: 14em;
+            font-size: inherit;
+        }
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: -1.4em;
+            left: 1em;
+            z-index: 1;
+            background-image: url('../img/line.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 6.813em;
+            height: 1.938em;
+            transform: rotate(-90deg);
+            
+            @include desktop {
+                transform: rotate(0deg);
+                top: 2em;
+                left: -10em;
+                width: 15.813em;
+                height: 3.438em;
+            }
+        }
+    }
+}

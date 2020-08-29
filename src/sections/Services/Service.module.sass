@@ -1,0 +1,147 @@
+.services
+  margin-top: 15vw
+  position: relative
+  width: 100%
+  height: 262vw
+  @media (min-width: 640px)
+    height: 58vw
+    margin: auto
+    width: 90vw
+    max-width: 750px
+  @media (min-width: 1140px)
+    height: 49vw
+    max-width: 1360px
+  nav
+    position: absolute
+    top: 140vw
+    @media (min-width: 640px)
+      position: absolute
+      bottom: 0
+      left: 116px
+      top: auto
+  @media (max-width: 639px)
+    button[type=button]
+      position: absolute
+      top: 140vw
+      margin: 0
+      &[class$="PREV"]
+        left: 50px
+      &[class$="NEXT"]
+        right: 50px
+  h3
+    position: relative
+    margin-bottom: 80px
+    + div
+      position: relative
+    @media (min-width: 640px)
+      padding-bottom: 0
+      margin-bottom: 10px
+      width: 350px
+    @media (min-width: 1140px)
+      width: 550px
+    a
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -50px
+      margin: auto
+      text-align: left
+      width: 165px
+      @media (min-width: 640px)
+        left: auto
+        bottom: auto
+        right: -150px
+        top: 6px
+        width: 120px
+      @media (min-width: 1140px)
+        top: 15px
+
+.service
+  width: 100%
+  height: 220vw
+  text-align: left
+  padding: 0 20px
+  display: grid
+  grid-template-rows: 40vw 1fr
+  grid-template-areas: 'image' 'content'
+  @media (min-width: 640px)
+    height: 34vw
+    grid-template-rows: 34vw
+    grid-template-columns: 12fr 10fr
+    grid-template-areas: 'content image'
+  @media (min-width: 1140px)
+    height: 29vw
+    grid-template-rows: 29vw
+
+.header
+  font-family: "Muller", sans-serif
+  font-size: 26px
+  font-weight: 800
+  margin-bottom: 25px
+  text-transform: uppercase
+  @media (min-width: 640px)
+    font-size: 24px
+  @media (min-width: 1140px)
+    font-size: 35px
+
+.price
+  font-family: "Muller", sans-serif
+  font-size: 21px
+  font-weight: 400
+  margin-bottom: 30px
+  @media (min-width: 640px)
+    font-size: 23px
+  @media (min-width: 1140px)
+    font-size: 29px
+
+.buttons
+  text-align: center
+  @media (min-width: 640px)
+    text-align: left
+
+.download
+  display: inline-block
+  margin: 20px auto 0
+  text-decoration: none
+  height: 40px
+  width: auto
+  background: url("assets/paper.png") left center no-repeat
+  background-size: 28px 28px
+  opacity: 0.47
+  font-style: italic
+  padding: 4px 0 4px 40px
+  font-size: 12px
+  font-weight: 400
+  line-height: 28px
+  color: #fff
+  @media (min-width: 640px)
+    background-size: 31px 31px
+    margin-top: 0
+    margin-left: 35px
+    width: 130px
+    font-size: 10px
+    line-height: 12px
+  @media (min-width: 1140px)
+    font-size: 13px
+    line-height: 16px
+    padding: 4px 0 4px 50px
+    background-size: 39px 39px
+  &:hover,&:focus
+    opacity: 0.9
+    transition: .3s
+
+.content
+  grid-area: content
+  align-self: center
+  @media (min-width: 640px)
+    padding-left: 40px
+
+.image
+  grid-area: image
+  position: relative
+
+.imageParallax
+  position: absolute
+  img
+    width: 100%
+    max-height: 100%

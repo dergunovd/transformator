@@ -1,0 +1,81 @@
+.unick {
+    text-align: center;
+    padding: 6.6em 0 1.6em;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        padding: 5em 0;
+    }
+
+    .section {
+        &__title {
+            font-family: $last_font_family;
+            font-size: 6.81em;
+            font-weight: 400;
+            line-height: 0.8;
+            letter-spacing: -0.049em;
+            margin: 0 auto 0.3em;
+            max-width: 6em;
+
+            @media (min-width: 768px) {
+                line-height: 0.88;
+                font-size: 7.813em;
+                max-width: 9em;
+                margin: auto;
+
+            }
+        }
+
+        &__sub {
+            font-family: $main_font_family;
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 2;
+            letter-spacing: -0.013em;
+            text-transform: none;
+
+            @media (min-width: 768px) {
+                font-size: 1.2em;
+                line-height: 2.67;
+            }
+        }
+
+    }
+
+    &__content {
+        position: relative;
+
+        img {
+            display: block;
+            width: 59.3em;
+
+            @media (min-width: 768px) {
+                margin-left: 5.6em;
+            }
+
+            @media (max-width: 767px) {
+                margin-top: -1.2em;
+            }
+
+            &:last-child {
+                // display: none;
+                position: absolute;
+                top: -10.1em;
+                left: -16.3em;
+                width: 52em;
+                max-width: none;
+
+                &.animated {
+                    animation: 2s fadeIn;
+                    opacity: 1;
+                }
+
+                @media (min-width: 768px) {
+                    top: -17.6em;
+                    left: -24.9em;
+                    width: 80.7em;
+                }
+            }
+        }
+    }
+}

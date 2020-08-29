@@ -1,0 +1,203 @@
+.casting {
+    padding: 0.4em 0;
+    background: url("../img/wire.png") left -48.4em top 55.6em no-repeat;
+    background-size: 206%;
+
+    @media (min-width: 768px) {
+        padding: 10.3em 0;
+        background: url("../img/wire.png") left -5.4em bottom 8.6em no-repeat;
+        background-size: 55.7%;
+    }
+
+    .section {
+        &__sub {}
+
+        &__title {
+            max-width: 14em;
+            margin-bottom: 1em;
+        }
+
+    }
+
+    &__text {
+        font-size: 1.83em;
+        font-weight: 400;
+        line-height: 1.78;
+        letter-spacing: -0.017em;
+        margin-bottom: 3.1em;
+
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+            padding-left: 7.5em;
+            max-width: 40em;
+            margin-bottom: 4.9em;
+
+        }
+    }
+
+    &__content {
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__left {
+
+        @media (min-width: 768px) {
+            flex: none;
+            width: 45.3em;
+            margin-right: 3em;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 18.9em;
+        }
+    }
+
+    &__row {
+        display: flex;
+        // align-items: center;
+        margin-bottom: 5.4em;
+
+        @media (min-width: 768px) {
+            max-width: 35em;
+            margin-bottom: 7em;
+        }
+    }
+
+    &__photo {
+        flex: none;
+        width: 8.4em;
+        margin-right: 1.9em;
+
+        @media (min-width: 768px) {
+            width: 6.4em;
+            margin-right: 2.3em;
+        }
+
+        img {
+            display: block;
+            border-radius: 50%;
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+        min-width: 0;
+
+        @media (max-width: 767px) {
+            margin-top: -.2em;
+        }
+    }
+
+    &__name {
+        font-size: 1.8em;
+        font-weight: 700;
+        letter-spacing: -0.021em;
+        line-height: 1.64;
+        margin-bottom: 0.1em;
+
+        @media (min-width: 768px) {
+            font-size: 1.375em;
+            margin-bottom: 0.4em;
+        }
+    }
+
+    &__descr {
+        color: $color_seccondary;
+        font-size: 1.75em;
+        font-weight: 400;
+        line-height: 1.7;
+
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+        }
+    }
+
+    &__right {
+        margin-top: -0.6em;
+        position: relative;
+
+        @media (max-width: 767px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+
+    &__audio {
+        background-color: #151515;
+        margin-bottom: 2.6em;
+        padding: 2.3em 2.3em 1em;
+        position: relative;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            border-radius: 0.313em;
+            padding: 0.8em 1.5em 1em;
+            margin-bottom: 1.2em;
+        }
+
+        &Title {
+            display: flex;
+            align-items: center;
+            color: $color_seccondary;
+            font-size: 1.83em;
+            font-weight: 400;
+            line-height: 1.67;
+            letter-spacing: -0.017em;
+            margin-bottom: 0.4em;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+            }
+
+            img {
+                margin-left: 0.7em;
+
+                &.check {
+                    width: 1.1em;
+                }
+
+                &.close {
+                    width: 0.86em;
+                }
+
+                @media (min-width: 768px) {
+                    &.check {
+                        width: 1.563em;
+                    }
+
+                    &.close {
+                        width: 1.063em;
+                    }
+                }
+            }
+        }
+    }
+
+    &__mic {
+        display: none;
+
+        &.animated {
+            animation: 1s slideUpLg;
+            opacity: 1;
+        }
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            top: -19.5em;
+            left: 5.1em;
+            width: 19em;
+        }
+    }
+
+    .audioplayer-time-current {
+        @media (max-width: 767px) {
+            position: absolute;
+            right: 1.5em;
+            top: 1.3em;
+            font-size: 0.95em;
+        }
+    }
+}

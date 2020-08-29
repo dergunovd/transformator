@@ -1,0 +1,105 @@
+.rezult {
+    padding: 7.5em 0 2em;
+    background: url("../img/rwzult-bg.jpg") top 8em center no-repeat;
+    background-size: 228%;
+    height: 71em;
+
+    @media (min-width: 768px) {
+        padding: 13em 0 2em;
+        background: url("../img/rwzult-bg.jpg") center no-repeat;
+        background-size: contain;
+    }
+
+    .section {
+        &__sub {}
+
+        &__title {
+            max-width: 14em;
+        }
+
+    }
+
+    &__video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 18.3em;
+
+        @media (min-width: 768px) {
+            height: 25em;
+        }
+    }
+
+    &__play {
+        position: relative;
+        width: 12em;
+        height: 12em;
+
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%), scale(1);
+        }
+
+        &:before {
+            border: 0.125em solid $main_color;
+            opacity: 0.3;
+            width: 18.25em;
+            height: 18.25em;
+            animation: 1s pulse1 infinite;
+        }
+
+        &:after {
+            width: 30.125em;
+            height: 30.125em;
+            border: 0.063em solid $main_color;
+            opacity: 0.1;
+            animation: 1s pulse2 infinite;
+        }
+
+        img {
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__show {
+        position: absolute;
+        font-family: $last_font_family;
+        font-size: 4.9em;
+        font-weight: 400;
+        line-height: 0.8;
+        letter-spacing: -0.036em;
+        width: 4em;
+        bottom: -3.1em;
+        right: -0.8em;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            right: -7.5em;
+            bottom: -3.3em;
+            font-size: 3.75em;
+            text-align: left;
+
+            &:before {
+                content: '';
+                display: block;
+                background: url("../img/rezult_line.svg") 0 0 no-repeat;
+                background-size: contain;
+                width: 2.6em;
+                height: 2.6em;
+                position: absolute;
+                left: -3.2em;
+                top: -1em;
+            }
+        }
+    }
+
+}

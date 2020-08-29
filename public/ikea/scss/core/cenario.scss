@@ -1,0 +1,41 @@
+.cenario {
+    padding: 4.3em 0 2.8em;
+
+    @include desktop {
+        padding: 2.1em 0 1.9em;
+    }
+    &__container {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0.8em;
+        left: 15.7em;
+        width: 7.6em;
+
+        @include desktop {
+            top: -0.5em;
+            left: 0.5em;
+            width: 24.6em;
+        }
+    }
+    
+    &__descr {
+        @include desktop {
+            margin-left: 28em;
+        }
+    }
+    
+    &__text {
+        font-size: 1.2em;
+        line-height: 1.6em;
+        letter-spacing: 0.01em;
+        max-width: 46.688em;
+
+        @include desktop {
+            font-size: 0.9em;
+            line-height: 1.893em;
+        }
+    }
+}
