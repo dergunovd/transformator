@@ -1,6 +1,7 @@
 import React from "react";
 import { Slider } from "../../../components/Slider/Slider";
 import { Service } from "./Service";
+import { Button } from "../../../components/Button/Button";
 import css from "./Service.module.sass";
 
 export const Services: React.FC = () => (
@@ -9,7 +10,7 @@ export const Services: React.FC = () => (
       <Service
         title="Рекламный ролик до 2 минут"
         price="от 250 000 рублей"
-        button={<button>Заказать ролик</button>}
+        button={<Button>Заказать ролик</Button>}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus
         sem ipsum, sed scelerisque diam fringilla eu. Phasellus com modo, magna
@@ -21,7 +22,7 @@ export const Services: React.FC = () => (
       <Service
         title="Рекламный ролик до 2 минут"
         price="от 250 000 рублей"
-        button={<button>Заказать ролик</button>}
+        button={<Button>Заказать ролик</Button>}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus
         sem ipsum, sed scelerisque diam fringilla eu. Phasellus com modo, magna
@@ -33,7 +34,7 @@ export const Services: React.FC = () => (
       <Service
         title="Рекламный ролик до 2 минут"
         price="от 250 000 рублей"
-        button={<button>Заказать ролик</button>}
+        button={<Button>Заказать ролик</Button>}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus
         sem ipsum, sed scelerisque diam fringilla eu. Phasellus com modo, magna

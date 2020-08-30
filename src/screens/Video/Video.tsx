@@ -4,7 +4,6 @@ import React from "react";
 import { Slider } from "../../components/Slider/Slider";
 import { Item } from "./Item/Item";
 
-import frame from "./frame.png";
 // TODO: reexport
 import BkOn from "./items/BURGER-ON.png";
 import BkOff from "./items/BURGER-OFF.png";
@@ -28,7 +27,7 @@ import css from "./Video.module.sass";
 
 export const Video: React.FC = () => (
   <section className={css.section}>
-    <img className={css.frame} src={frame} alt="" />
+    {/*<img className={css.frame} src={frame} alt="" />*/}
     <Slider itemsToShow={3} pagination={false}>
       <Item alt="Rolls Royce" srcOn={RrOn} srcOff={RrOff} />
       <Item alt="Poker Dom" srcOn={PokerOn} srcOff={PokerOff} />

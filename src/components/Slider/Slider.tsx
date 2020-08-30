@@ -26,7 +26,7 @@ const Arrow: React.FC<RenderArrowProps> = ({ type, onClick }) => (
 
 type IPagination = (props: RenderPaginationProps) => JSX.Element;
 const Pagination: IPagination = ({ pages, activePage, onClick }) => (
-  <div className={css.pagination}>
+  <nav className={classnames(css.pagination, "pagination")}>
     {pages.map((page) => (
       <span
         key={page}
@@ -36,7 +36,7 @@ const Pagination: IPagination = ({ pages, activePage, onClick }) => (
         onClick={() => onClick(`${page}`)}
       />
     ))}
-  </div>
+  </nav>
 );
 
 export const Slider: React.FC<SliderProps> = ({ children, ...props }) => (

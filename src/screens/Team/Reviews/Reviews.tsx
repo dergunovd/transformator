@@ -1,6 +1,7 @@
 import React from "react";
 import { Slider } from "../../../components/Slider/Slider";
 import { Review } from "./Review";
+import logo from "./BURGER-ON.png";
 import css from "./Review.module.sass";
 
 export const Reviews: React.FC = () => (
@@ -9,6 +10,7 @@ export const Reviews: React.FC = () => (
       <Review
         title="Иванов Иван Иванович"
         subtitle="Директор по маркетингу компании Бургер Кинг"
+        image={logo}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus
         sem ipsum, sed scelerisque diam fringilla eu. Phasellus com modo, magna
@@ -20,6 +22,7 @@ export const Reviews: React.FC = () => (
       <Review
         title="Иванов Иван Иванович"
         subtitle="Директор по маркетингу компании Бургер Кинг"
+        image={logo}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus
         sem ipsum, sed scelerisque diam fringilla eu. Phasellus com modo, magna
@@ -31,6 +34,7 @@ export const Reviews: React.FC = () => (
       <Review
         title="Иванов Иван Иванович"
         subtitle="Директор по маркетингу компании Бургер Кинг"
+        image={logo}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus
         sem ipsum, sed scelerisque diam fringilla eu. Phasellus com modo, magna
