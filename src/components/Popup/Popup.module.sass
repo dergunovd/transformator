@@ -1,0 +1,28 @@
+.close
+  width: 13px
+  height: 13px
+  background: url("./close.png") center center / contain
+  opacity: .9
+  transition: .3s
+  position: absolute
+  right: 20px
+  top: 20px
+  cursor: pointer
+  &:hover
+    opacity: 1
+
+.input
+  border-radius: 17px
+  width: 360px
+  background-color: rgba(236, 236, 236,.1)
+  margin-bottom: 25px
+  color: white
+  border: none
+  padding: 25px
+  &:focus
+    border: none
+    outline: none
+  &::placeholder
+    color: white
+  &:nth-child(4)
+    margin-bottom: 40px

@@ -6,6 +6,8 @@ import { Production } from "./screens/Production/Production";
 import { Video } from "./screens/Video/Video";
 import { Team } from "./screens/Team/Team";
 import { Footer } from "./screens/Footer/Footer";
+import { Popup } from "./components/Popup/Popup";
+import { PopupProvider } from "./context/popup.context";
 
 export default () => {
   const { parallaxController } = useController();
@@ -15,10 +17,13 @@ export default () => {
       onLoad={parallaxController.update}
       onScroll={parallaxController.update}
     >
-      <Production />
-      <Video />
-      <Team />
-      <Footer />
+      <PopupProvider>
+        <Production />
+        <Video />
+        <Team />
+        <Footer />
+        <Popup />
+      </PopupProvider>
     </div>
   );
 };

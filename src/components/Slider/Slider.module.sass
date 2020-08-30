@@ -1,6 +1,8 @@
 .slider
   width: 1200px
   margin: auto
+  div[tabindex]
+    outline: none
 
 .arrow
   top: 0
@@ -11,6 +13,8 @@
   width: 35px
   height: 24px
   background: url('nextOff.png') no-repeat
+  position: relative
+  z-index: 0
 
   &:hover, &:focus, &:active
     background: url('nextOn.png') no-repeat
