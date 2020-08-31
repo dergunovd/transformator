@@ -1,17 +1,21 @@
 .button
   font-weight: 600
-  font-size: 19px
-  line-height: 26px
+  font-size: 15px
+  line-height: 21px
   color: white
   box-shadow: 0 0 40px 1px rgba(255, 106, 173, 1)
   border-radius: 17px
   background: #ff0072 radial-gradient(circle at center -60px, #fff, transparent)
-  height: 90px
-  width: 360px
+  height: 72px
+  width: 288px
   text-transform: uppercase
   border: none
   cursor: pointer
-
+  @media (min-width: 1024px)
+    font-size: 19px
+    line-height: 26px
+    height: 90px
+    width: 360px
   &:hover
     box-shadow: 0 0 60px 1px rgba(255, 106, 173,1)
 

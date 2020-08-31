@@ -1,7 +1,10 @@
 .reviews
-  padding: 200px 0 800px
-  width: 1170px
+  padding: 0 0 500px
+  width: 870px
   margin: auto
+  @media (min-width: 1024px)
+    padding: 200px 0 800px
+    width: 1170px
 
 .reviewsContent
   position: relative
@@ -14,23 +17,37 @@
 
 .header
   font-family: "Muller", sans-serif
-  font-size: 44px
+  font-size: 35px
   font-weight: 800
+  @media (min-width: 1024px)
+    font-size: 44px
 
 .subtitle
   font-family: "Muller", sans-serif
   font-style: italic
-  font-size: 21px
+  font-size: 17px
   font-weight: 400
+  @media (min-width: 1024px)
+    font-size: 21px
 
 .description
-  width: 500px
+  width: 400px
   opacity: 0.5
-  font-size: 16px
+  font-size: 14px
   font-weight: 400
-  line-height: 24px
+  line-height: 20px
+  @media (min-width: 1024px)
+    width: 500px
+    font-size: 16px
+    line-height: 24px
 
 .image
   position: absolute
-  top: -70px
-  right: 90px
+  top: 0
+  right: 140px
+  transform-origin: top right
+  transform: scale(.6)
+  @media (min-width: 1024px)
+    top: -70px
+    right: 90px
+    transform: scale(1)
