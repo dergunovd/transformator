@@ -1,18 +1,24 @@
-import React, { useContext } from "react";
-import { Slider } from "../../../components/Slider/Slider";
+import React, { useCallback, useContext, useState } from "react";
+import { Slider } from "../../components/Slider/Slider";
 import { Service } from "./Service";
-import { Button } from "../../../components/Button/Button";
-import { PopupContext } from "../../../context/popup.context";
-import rocket from "./rocket.png";
+import { Button } from "../../components/Button/Button";
+import { PopupContext } from "../../context/popup.context";
+import slideImg from "./assets/slideImg.png";
 import css from "./Service.module.sass";
 
+const SLIDER_IMAGES = [slideImg, slideImg, slideImg];
 export const Services: React.FC = () => {
   const { setOpen } = useContext(PopupContext);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const onChangeSlide = useCallback((slides, currentIndex) => {
+    setCurrentIndex(currentIndex);
+  }, []);
 
   return (
     <div className={css.services}>
-      <img src={rocket} className={css.image} alt="" />
-      <Slider>
+      <img src={SLIDER_IMAGES[currentIndex]} className={css.image} alt="" />
+      <Slider onChange={onChangeSlide}>
         <Service
           title="Рекламный ролик до 2 минут"
           price="от 250 000 рублей"

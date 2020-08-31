@@ -1,8 +1,6 @@
 import React from "react";
 import css from "./Team.module.sass";
 import { Planet } from "./Planet";
-import { Services } from "./Services/Services";
-import { Reviews } from "./Reviews/Reviews";
 
 export const Team: React.FC = () => (
   <section className={css.team}>
@@ -12,7 +10,5 @@ export const Team: React.FC = () => (
       из космоса
     </p>
     <Planet />
-    <Services />
-    <Reviews />
   </section>
 );

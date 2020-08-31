@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import css from "./Service.module.sass";
-import { PopupContext } from "../../../context/popup.context";
+import { PopupContext } from "../../context/popup.context";
 
 export interface ReviewProps {
   title: string;
