@@ -1,6 +1,6 @@
 import React from "react";
+
 import css from "./Team.module.sass";
-import { Planet } from "./Planet";
 
 export const Team: React.FC = () => (
   <section className={css.team}>
@@ -9,6 +9,5 @@ export const Team: React.FC = () => (
       Мы снимаем контент по всему миру, а если нужно снимем хорошие кадры даже
       из космоса
     </p>
-    <Planet />
   </section>
 );

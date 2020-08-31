@@ -22,7 +22,7 @@ export const Service: React.FC<ReviewProps> = ({
       <h3 className={css.header}>{title}</h3>
       <h4 className={css.price}>{price}</h4>
       <p className={css.description}>{children}</p>
-      <div>
+      <div className={css.buttons}>
         {button}&nbsp;
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a className={css.download} onClick={() => setOpen(true)}>

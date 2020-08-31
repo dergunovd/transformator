@@ -41,12 +41,14 @@ body
   background: black
   color: white
   text-align: center
-  min-width: 960px
+  min-width: 320px
 
 main
-  background: url("./background1024.jpg") center top / cover
+  background: url("background480.jpg") center top / 480px
   overflow-x: hidden
-  @media (min-width: 1024px)
+  @media (min-width: 480px)
+    background: url("background960.jpg") center top / cover
+  @media (min-width: 960px)
     background: url("./background.jpg") center top / cover
 
 h1, h2, h3, h4, h5, h6

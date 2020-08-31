@@ -1,8 +1,11 @@
 .reviews
-  padding: 0 0 500px
-  width: 870px
+  padding: 0 0 100px
+  width: 100%
   margin: auto
-  @media (min-width: 1024px)
+  @media (min-width: 480px)
+    padding: 0 0 500px
+    width: 870px
+  @media (min-width: 1140px)
     padding: 200px 0 800px
     width: 1170px
 
@@ -17,37 +20,57 @@
 
 .header
   font-family: "Muller", sans-serif
-  font-size: 35px
+  font-size: 34px
   font-weight: 800
-  @media (min-width: 1024px)
+  @media (min-width: 480px)
+    font-size: 35px
+  @media (min-width: 1140px)
     font-size: 44px
 
 .subtitle
   font-family: "Muller", sans-serif
   font-style: italic
   font-size: 17px
+  line-height: 25px
   font-weight: 400
-  @media (min-width: 1024px)
+  @media (min-width: 480px)
+    font-size: 17px
+  @media (min-width: 1140px)
     font-size: 21px
 
 .description
-  width: 400px
+  width: 100%
   opacity: 0.5
-  font-size: 14px
+  font-size: 12px
   font-weight: 400
-  line-height: 20px
-  @media (min-width: 1024px)
+  line-height: 17px
+  padding-bottom: 400px
+  @media (min-width: 480px)
+    font-size: 14px
+    line-height: 20px
+    width: 400px
+    padding-bottom: 0
+  @media (min-width: 1140px)
     width: 500px
     font-size: 16px
     line-height: 24px
 
 .image
   position: absolute
-  top: 0
-  right: 140px
-  transform-origin: top right
-  transform: scale(.6)
-  @media (min-width: 1024px)
+  bottom: 0
+  left: 0
+  right: 0
+  width: 90%
+  margin: auto
+  @media (min-width: 480px)
+    left: auto
+    bottom: auto
+    top: 0
+    right: 140px
+    width: auto
+    transform: scale(.6)
+    transform-origin: top right
+  @media (min-width: 1140px)
     top: -70px
     right: 90px
     transform: scale(1)

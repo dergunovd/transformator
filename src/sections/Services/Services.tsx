@@ -18,7 +18,7 @@ export const Services: React.FC = () => {
   return (
     <div className={css.services}>
       <img src={SLIDER_IMAGES[currentIndex]} className={css.image} alt="" />
-      <Slider onChange={onChangeSlide}>
+      <Slider onChange={onChangeSlide} isShort>
         <Service
           title="Рекламный ролик до 2 минут"
           price="от 250 000 рублей"

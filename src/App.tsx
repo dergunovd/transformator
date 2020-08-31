@@ -9,6 +9,7 @@ import { Popup } from "./components/Popup/Popup";
 import { PopupProvider } from "./context/popup.context";
 import { Services } from "./sections/Services/Services";
 import { Reviews } from "./sections/Reviews/Reviews";
+import { Planet } from "./sections/Planet/Planet";
 
 export default () => {
   const { parallaxController } = useController();
@@ -23,6 +24,7 @@ export default () => {
         <main>
           <Cases />
           <Team />
+          <Planet />
           <Services />
           <Reviews />
         </main>

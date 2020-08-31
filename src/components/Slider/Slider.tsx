@@ -15,11 +15,17 @@ type RenderPaginationProps = {
   onClick: (indicatorId: string) => void;
 };
 
-interface SliderProps extends Partial<ReactElasticCarouselProps> {}
-const Arrow: React.FC<RenderArrowProps> = ({ type, onClick }) => (
+interface SliderProps extends Partial<ReactElasticCarouselProps> {
+  isShort?: boolean;
+}
+
+const Arrow = (isShort?: boolean): React.FC<RenderArrowProps> => ({
+  type,
+  onClick,
+}) => (
   <button
     type="button"
-    className={classnames(css.arrow, css[type])}
+    className={classnames(css.arrow, css[type], { [css.short]: isShort })}
     onClick={onClick}
   />
 );
@@ -39,10 +45,14 @@ const Pagination: IPagination = ({ pages, activePage, onClick }) => (
   </nav>
 );
 
-export const Slider: React.FC<SliderProps> = ({ children, ...props }) => (
+export const Slider: React.FC<SliderProps> = ({
+  children,
+  isShort,
+  ...props
+}) => (
   <div className={css.slider}>
     <Carousel
-      renderArrow={Arrow}
+      renderArrow={Arrow(isShort)}
       itemPadding={[0]}
       // @ts-ignore
       renderPagination={Pagination}

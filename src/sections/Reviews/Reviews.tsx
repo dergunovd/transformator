@@ -17,7 +17,7 @@ export const Reviews: React.FC = () => {
     <div className={css.reviews}>
       <div className={css.reviewsContent}>
         <img src={SLIDER_IMAGES[currentIndex]} className={css.image} alt="" />
-        <Slider onChange={onChangeSlide}>
+        <Slider onChange={onChangeSlide} isShort>
           <Review
             title="Иванов Иван Иванович"
             subtitle="Директор по маркетингу компании Бургер Кинг"
