@@ -13,6 +13,7 @@ Object.assign(Modal.defaultStyles.content, {
   left: "20px",
   right: "20px",
   minHeight: "100px",
+  height: "auto",
   maxHeight: "600px",
   margin: "auto",
   paddingTop: "50px",

@@ -13,16 +13,22 @@
     max-width: 1360px
   nav
     position: absolute
-    top: 140vw
+    left: 0
+    right: 0
+    top: 85vw
+    justify-content: center
     @media (min-width: 640px)
+      justify-content: flex-start
       position: absolute
       bottom: 0
       left: 116px
       top: auto
+      right: auto
   @media (max-width: 639px)
     button[type=button]
+      z-index: 2
       position: absolute
-      top: 140vw
+      top: 84vw
       margin: 0
       &[class$="PREV"]
         left: 50px
@@ -138,6 +144,7 @@
 
 .image
   grid-area: image
+  margin: 0 -10px
   position: relative
 
 .imageParallax
