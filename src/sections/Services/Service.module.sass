@@ -34,12 +34,16 @@
         left: 50px
       &[class$="NEXT"]
         right: 50px
+  h2
+    margin-top: 10px
+
   h3
     position: relative
     margin-bottom: 80px
     + div
       position: relative
     @media (min-width: 640px)
+      margin-top: 10px
       padding-bottom: 0
       margin-bottom: 10px
       width: 350px
@@ -144,8 +148,11 @@
 
 .image
   grid-area: image
-  margin: 0 -10px
   position: relative
+  width: 90%
+  @media (max-width: 639px)
+    width: 100%
+    margin: 0 -10px
 
 .imageParallax
   position: absolute
