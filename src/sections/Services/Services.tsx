@@ -15,9 +15,6 @@ import water2 from "./assets/water2.png";
 import water3 from "./assets/water3.png";
 import lamp1 from "./assets/lamp1.png";
 import lamp2 from "./assets/lamp2.png";
-import hand1 from "./assets/hand1.png";
-import hand2 from "./assets/hand2.png";
-import hand3 from "./assets/hand3.png";
 import doc3 from "./assets/doc3.png";
 import doc2 from "./assets/doc2.png";
 import doc4 from "./assets/doc4.png";
@@ -37,11 +34,6 @@ const BUTTONS = [
     product: "Имиджевое видео",
     title: "Имиджевое видео",
     text: "Заказать видео",
-  },
-  {
-    product: "Компьютерная графика",
-    title: "Компьютерную графику",
-    text: "Заказать графику",
   },
   {
     product: "Документальный фильм",
@@ -104,7 +96,8 @@ export const Services: React.FC = () => {
       <Slider onChange={onChangeSlide}>
         <Service
           title="Рекламный ролик до 2 минут"
-          price="от 250 000 рублей"
+          price="от 500 000 рублей"
+          description="Яркое видео, главная задача которого продать ваш продукт"
           button={
             <Button
               onClick={() => {
@@ -153,7 +146,8 @@ export const Services: React.FC = () => {
         />
         <Service
           title="Имиджевое видео до 5 минут"
-          price="от 500 000 рублей"
+          price="от 1 000 000 рублей"
+          description="Видео о компании, главная задача которого увеличить узнаваемость и лояльность к бренду у целевой аудитории"
           button={
             <Button
               onClick={() => {
@@ -199,8 +193,9 @@ export const Services: React.FC = () => {
           }
         />
         <Service
-          title="Компьютерная графика"
-          price="от 100 000 рублей"
+          title="Документальный фильм"
+          price="от 2 500 000 рублей"
+          description="Инструмент, позволяющий создать образ компании и укрепить доверие к бренду"
           button={
             <Button
               onClick={() => {
@@ -223,56 +218,6 @@ export const Services: React.FC = () => {
               }
             >
               <Zoom opposite when={currentIndex === 2}>
-                <div className={css.imageParallax}>
-                  <img className={css.imageParallaxItem} alt="" src={hand1} />
-                </div>
-                <Parallax className={css.imageParallax} y={[-10, 10]}>
-                  <animated.div
-                    style={{
-                      transform: interpolate(props.xy, trans2),
-                    }}
-                  >
-                    <img className={css.imageParallaxItem} alt="" src={hand2} />
-                  </animated.div>
-                </Parallax>
-                <Parallax className={css.imageParallax} y={[10, -10]}>
-                  <animated.div
-                    style={{
-                      transform: interpolate(props.xy, trans3),
-                    }}
-                  >
-                    <img className={css.imageParallaxItem} alt="" src={hand3} />
-                  </animated.div>
-                </Parallax>
-              </Zoom>
-            </div>
-          }
-        />
-        <Service
-          title="Документальный фильм"
-          price="от 2 000 000 рублей"
-          button={
-            <Button
-              onClick={() => {
-                setOpen(true);
-                setType("phone");
-                setConfig({
-                  product: BUTTONS[3].product,
-                  title: BUTTONS[3].product,
-                });
-              }}
-            >
-              {BUTTONS[3].text}
-            </Button>
-          }
-          image={
-            <div
-              className={css.image}
-              onMouseMove={({ clientX: x, clientY: y }) =>
-                set({ xy: calc(x, y) })
-              }
-            >
-              <Zoom opposite when={currentIndex === 3}>
                 <div className={css.imageParallax}>
                   <img className={css.imageParallaxItem} alt="" src={doc3} />
                 </div>
@@ -309,19 +254,20 @@ export const Services: React.FC = () => {
         />
         <Service
           title="Специальный проект"
-          price="от 100 000 рублей"
+          price=""
+          description="Мы реализуем любую вашу самую смелую идею"
           button={
             <Button
               onClick={() => {
                 setOpen(true);
                 setType("phone");
                 setConfig({
-                  product: BUTTONS[4].product,
-                  title: BUTTONS[4].product,
+                  product: BUTTONS[3].product,
+                  title: BUTTONS[3].product,
                 });
               }}
             >
-              {BUTTONS[4].text}
+              {BUTTONS[3].text}
             </Button>
           }
           image={
@@ -331,7 +277,7 @@ export const Services: React.FC = () => {
                 set({ xy: calc(x, y) })
               }
             >
-              <Zoom opposite when={currentIndex === 4}>
+              <Zoom opposite when={currentIndex === 3}>
                 <div className={css.imageParallax}>
                   <img className={css.imageParallaxItem} alt="" src={banan1} />
                 </div>

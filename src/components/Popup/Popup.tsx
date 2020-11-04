@@ -173,7 +173,7 @@ export const Popup: React.FC = () => {
               />
               <span className={css.myCheckbox} />Я принимаю условия передачи
               информации и{" "}
-              <a href="/privacy_policy.pdf" target="_blank">
+              <a href="/Политика конфиденциальности.pdf" target="_blank">
                 политику конфиденциальности
               </a>
             </label>

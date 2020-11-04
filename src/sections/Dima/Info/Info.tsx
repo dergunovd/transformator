@@ -19,7 +19,7 @@ export const Info: React.FC = () => {
           <li>Основатель «Transformator Production».</li>
           <li>
             Основатель бизнес-блога «Трансформатор»
-            (1&nbsp;560&nbsp;000&nbsp;подписчиков).
+            (1.5&nbsp;млн подписчиков).
           </li>
           <li>
             Основатель агентства эксклюзивных путешествий «Transformator

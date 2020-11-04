@@ -18,7 +18,7 @@ export const Footer: React.FC = () => (
     </div>
     <div className={css.policy}>
       <a
-        href="/privacy_policy.pdf"
+        href="/Политика конфиденциальности.pdf"
         target="_blank"
         className={classNames(css.footerLink, css.smallLink)}
       >

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 
-import instagram from "../../../assets/instagram.png";
-import vimeo from "../../../assets/vimeo.png";
-import whatsapp from "../../../assets/whatsapp.png";
+import telegram from "../../../assets/telegram.svg";
+import instagram from "../../../assets/instagram.svg";
+import vimeo from "../../../assets/vimeo.svg";
+import whatsapp from "../../../assets/whatsapp.svg";
 
 import css from "./Social.module.sass";
 
@@ -18,6 +19,14 @@ export const Social = () => {
       <div className={css.social}>
         <a
           className={classNames(css.socialLink, { [css.hidden]: isHidden })}
+          href="https://tgme.pro/TransformatorTV"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img src={telegram} alt="Telegram" />
+        </a>
+        <a
+          className={classNames(css.socialLink, { [css.hidden]: isHidden })}
           href="https://instagram.com/transformator"
           rel="noopener noreferrer"
           target="_blank"
@@ -26,7 +35,7 @@ export const Social = () => {
         </a>
         <a
           className={classNames(css.socialLink, { [css.hidden]: isHidden })}
-          href="https://wa.me/79198392634"
+          href="https://wa.me/79255556767"
           rel="noopener noreferrer"
           target="_blank"
         >
