@@ -2,18 +2,20 @@
   width: 100%
   height: 214vw
   margin-top: 3.7vw
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     height: 50vw
-  @media (min-width: 1140px)
-    height: 48vw
+  @media (min-width: 1280px)
+    height: 49vw
 
 .dimaImg
   position: absolute
   height: 90vw
   left: 0
   bottom: 0
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     height: 50vw
+  @media (min-width: 1280px)
+    height: 49vw
 
 .content
   position: absolute
@@ -21,7 +23,7 @@
   display: grid
   grid-template-areas: 'text text' 'instagram sign'
   margin: 0 25px
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     margin: 0
     grid-template-areas: 'text' 'sign' 'instagram'
     left: 50%
@@ -30,7 +32,7 @@
   grid-area: text
   font-size: 18px
   text-align: left
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     max-width: 47vw
     width: 355px
     font-size: 14px
@@ -38,7 +40,7 @@
   @media (min-width: 860px)
     font-size: 15px
     line-height: 18px
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     width: 640px
     font-size: 20px
     line-height: 24px
@@ -60,13 +62,16 @@
   text-align: right
   white-space: nowrap
   align-self: center
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     font-size: 14px
     margin-right: 70px
     line-height: 22px
   @media (min-width: 860px)
     font-size: 15px
     line-height: 22px
+  @media (min-width: 1280px)
+    font-size: 30px
+    line-height: 44px
   &:before
     content: ''
     margin-right: 14px
@@ -78,10 +83,6 @@
     @media (min-width: 1280px)
       width: 44px
       height: 44px
-  @media (min-width: 1280px)
-    font-size: 30px
-    line-height: 44px
-
 .sign
   grid-area: sign
   text-align: right
@@ -91,5 +92,5 @@
     @media (min-width: 860px)
       width: 160px
 
-    @media (min-width: 1280px)
+    @media (min-width: 1366px)
       width: 315px

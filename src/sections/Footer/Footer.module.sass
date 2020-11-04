@@ -3,22 +3,25 @@
   display: grid
   height: 80vw
   grid-template-areas: 'social' 'email' 'mobile' 'policy'
-  padding-bottom: 30px
-  grid-row-gap: 20px
-  @media (min-width: 640px)
+  padding-bottom: 2vw
+  grid-row-gap: 2vw
+  @media (min-width: 768px)
     margin-top: 2vw
-    height: 10vw
-    padding-left: 30px
+    height: 14vw
+    padding-left: 5vw
     text-align: left
     width: 60vw
-    grid-row-gap: 10px
+    align-items: end
+    grid-row-gap: 1vw
     grid-template-areas: 'social social' 'mobile mobile' 'email policy'
+  @media (min-width: 1280px)
+    height: 12vw
 
 .social
   grid-area: social
   margin-top: 15vw
   margin-bottom: 10vw
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     margin: 0
 
 .mobile
@@ -42,19 +45,19 @@
     opacity: 0
   &:hover
     opacity: 1
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     font-size: 17px
     line-height: 17px
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     font-size: 17px
     line-height: 17px
 
 .smallLink
   font-size: 18px
   line-height: 18px
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     font-size: 11px
     line-height: 11px
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     font-size: 18px
     line-height: 24px

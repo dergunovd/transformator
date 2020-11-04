@@ -2,15 +2,19 @@
   position: relative
   margin-top: 29vw
   padding: 0 10px
-  @media (min-width: 640px)
-    margin-top: 12vw
+  @media (min-width: 768px)
+    margin-top: 6vw
     button[type=button]
       &[class$="NEXT"]
         position: absolute
-        left: calc(100vw - 100px)
-  @media (min-width: 1140px)
+        left: 90vw
+        @media (min-width: 1280px)
+          left: calc(80vw - 100px)
+  @media (min-width: 1024px)
+    margin-top: 10vw
+  @media (min-width: 1280px)
     width: 90vw
-    margin-top: 5vw
+    margin-top: 12vw
 
   @media (max-width: 639px)
     button[type=button]
@@ -28,23 +32,24 @@
     right: 0
     margin: auto
     justify-content: center
-    @media (min-width: 640px)
+    @media (min-width: 768px)
       justify-content: flex-start
-      margin-left: 72px
+      margin-left: calc(10vw + 50px)
     @media (min-width: 1280px)
-      bottom: 4vw
+      bottom: 0
     @media (min-width: 1680px)
-      bottom: 6vw
+      bottom: 4vw
     @media (min-width: 1800px)
-      bottom: 8vw
+      bottom: 6vw
 
 .reviewsContent
   position: relative
   width: 100%
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     width: 55vw
-  @media (min-width: 1140px)
-    width: 50vw
+  @media (min-width: 1280px)
+    width: 40vw
+    margin-left: 10vw
 
 .review
   display: flex
@@ -57,11 +62,11 @@
   position: relative
   @media (min-width: 480px)
     height: 150vw
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     justify-content: center
     height: 45vw
     padding: 0 20px
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     height: 28vw
     padding: 0 10px
 
@@ -76,11 +81,11 @@
   width: 100%
   color: #fff
   opacity: 1
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     margin-top: 0
     padding-top: 0
     font-size: 35px
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     margin-bottom: 0
     font-size: 44px
 
@@ -90,9 +95,9 @@
   font-size: 17px
   line-height: 25px
   font-weight: 400
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     font-size: 17px
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     font-size: 21px
 
 .description
@@ -103,11 +108,11 @@
   line-height: 17px
   @media (min-width: 480px)
     padding-bottom: 340px
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     font-size: 14px
     line-height: 20px
     padding-bottom: 0
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     font-size: 16px
     line-height: 24px
 
@@ -118,11 +123,11 @@
   right: 0
   width: 100%
   margin: auto
-  @media (min-width: 640px)
+  @media (min-width: 768px)
     left: 50vw
     width: 45vw
     top: 15vw
-  @media (min-width: 1140px)
+  @media (min-width: 1280px)
     left: 45vw
     width: 40vw
     top: 8vw
