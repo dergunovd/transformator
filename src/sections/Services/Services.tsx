@@ -95,7 +95,7 @@ export const Services: React.FC = () => {
       </h3>
       <Slider onChange={onChangeSlide}>
         <Service
-          title="Рекламный ролик до 2 минут"
+          title="Рекламный ролик до 1.5 минут"
           price="от 500 000 рублей"
           description="Яркое видео, главная задача которого продать ваш продукт"
           button={
@@ -145,7 +145,7 @@ export const Services: React.FC = () => {
           }
         />
         <Service
-          title="Имиджевое видео до 5 минут"
+          title="Имиджевое видео до 3 минут"
           price="от 1 000 000 рублей"
           description="Видео о компании, главная задача которого увеличить узнаваемость и лояльность к бренду у целевой аудитории"
           button={

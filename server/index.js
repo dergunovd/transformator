@@ -45,8 +45,8 @@ app.post("/send", async (req, res) => {
       attachments: [
         {
           // use URL as an attachment
-          filename: "presentation.pdf",
-          path: "https://transformator.media/presentation.pdf",
+          filename: "Transformator Production.pdf",
+          path: "http://transformator.media/presentation.pdf",
         },
       ],
       html: `Привет! Лови презентацию во вложении к этому письму. Будем рады поработать вместе ⚡️
@@ -57,6 +57,15 @@ app.post("/send", async (req, res) => {
     })
     .catch(res.error);
   console.log("Message sent: %s", info);
+  const info2 = await transporter
+    .sendMail({
+      from: '"Трансформатор Production" <info@transformator.media>',
+      to: "info@transformator.media",
+      subject: "Скачивание презентации",
+      html: `<b>${req.body.email}</b> скачал презентацию`,
+    })
+    .catch(res.error);
+  console.log("Message sent: %s", info2);
   res.sendStatus(200);
 });
 
@@ -83,7 +92,7 @@ app.post("/feedback", async (req, res) => {
       from: '"Трансформатор Production" <info@transformator.media>',
       to: "info@transformator.media",
       subject: "Сообщение с сайта",
-      html: `<ul><li>Имя: <b>${data.name}</b></li><li>Телефон: <b>${data.phone}</b></li></ul><br/><p>{data.message}</p>`,
+      html: `<ul><li>Имя: <b>${data.name}</b></li><li>Телефон: <b>${data.phone}</b></li></ul><br/><p>${data.message}</p>`,
     })
     .catch(res.error);
   console.log("Message sent: %s", info);

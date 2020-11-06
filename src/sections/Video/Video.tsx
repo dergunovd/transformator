@@ -6,7 +6,7 @@ export const Video: React.FC = () => (
   <section className={css.video}>
     <iframe
       className={css.frame}
-      src="https://player.vimeo.com/video/473455824"
+      src="https://player.vimeo.com/video/475812857"
       frameBorder="0"
       width="100%"
       height="100%"

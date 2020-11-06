@@ -35,9 +35,11 @@ export const Popup: React.FC = () => {
   const send = useCallback(
     (e) => {
       e.preventDefault();
+      const SERVER_HOST = "https://server.transformator.media";
+      // const SERVER_HOST = "http://server.transformator.dergunov.net";
       if (type === "phone") {
         axios
-          .post("https://server.transformator.media/get", {
+          .post(`${SERVER_HOST}/get`, {
             name,
             phone,
             product: config?.product,
@@ -46,14 +48,14 @@ export const Popup: React.FC = () => {
           .catch(console.error);
       } else if (type === "email") {
         axios
-          .post("https://server.transformator.media/send", {
+          .post(`${SERVER_HOST}/send`, {
             email,
           })
           .then(() => setSend(true))
           .catch(console.error);
       } else {
         axios
-          .post("https://server.transformator.media/feedback", {
+          .post(`${SERVER_HOST}/feedback`, {
             name,
             phone,
             message,
