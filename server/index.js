@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const axios = require("axios");
 
 const app = express();
 const port = 4001;
@@ -37,10 +38,12 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send", async (req, res) => {
+  const data = req.body;
+
   const info = await transporter
     .sendMail({
       from: '"Трансформатор Production" <info@transformator.media>',
-      to: req.body.email,
+      to: data.email,
       subject: "Презентация",
       attachments: [
         {
@@ -57,45 +60,55 @@ app.post("/send", async (req, res) => {
     })
     .catch(res.error);
   console.log("Message sent: %s", info);
-  const info2 = await transporter
-    .sendMail({
-      from: '"Трансформатор Production" <info@transformator.media>',
-      to: "info@transformator.media",
-      subject: "Скачивание презентации",
-      html: `<b>${req.body.email}</b> скачал презентацию`,
-    })
-    .catch(res.error);
-  console.log("Message sent: %s", info2);
+
+  await axios({
+    method: "post",
+    url: "http://transfamo.beget.tech/toAmo.php",
+
+    data: JSON.stringify({
+      name: data.email || "",
+      product: data.product || "Презентация",
+      phone: data.email || "000000",
+      message: data.message || "EMPTY",
+    }),
+    headers: { "Content-Type": "application/json;charset=utf-8" },
+  }).catch((e) => console.log(e));
+
   res.sendStatus(200);
 });
 
 app.post("/get", async (req, res) => {
   const data = req.body;
 
-  const info = await transporter
-    .sendMail({
-      from: '"Трансформатор Production" <info@transformator.media>',
-      to: "info@transformator.media",
-      subject: "Заявка с сайта",
-      html: `<ul><li>Продукт: <b>${data.product}</b><li>Имя: <b>${data.name}</b></li><li>Телефон: <b>${data.phone}</b></li></ul>`,
-    })
-    .catch(res.error);
-  console.log("Message sent: %s", info);
+  await axios({
+    method: "post",
+    url: "http://transfamo.beget.tech/toAmo.php",
+
+    data: JSON.stringify({
+      name: data.name || "EMPTY",
+      product: data.product || "",
+      phone: data.phone || "000000",
+      message: data.message || "EMPTY",
+    }),
+    headers: { "Content-Type": "application/json;charset=utf-8" },
+  }).catch((e) => console.log(e));
+
   res.sendStatus(200);
 });
 
 app.post("/feedback", async (req, res) => {
   const data = req.body;
-
-  const info = await transporter
-    .sendMail({
-      from: '"Трансформатор Production" <info@transformator.media>',
-      to: "info@transformator.media",
-      subject: "Сообщение с сайта",
-      html: `<ul><li>Имя: <b>${data.name}</b></li><li>Телефон: <b>${data.phone}</b></li></ul><br/><p>${data.message}</p>`,
-    })
-    .catch(res.error);
-  console.log("Message sent: %s", info);
+  await axios({
+    method: "post",
+    url: "http://transfamo.beget.tech/toAmo.php",
+    data: JSON.stringify({
+      name: data.name || "EMPTY",
+      product: data.product || "",
+      phone: data.phone || "000000",
+      message: data.message || "EMPTY",
+    }),
+    headers: { "Content-Type": "application/json;charset=utf-8" },
+  }).catch((e) => console.log(e));
   res.sendStatus(200);
 });
 

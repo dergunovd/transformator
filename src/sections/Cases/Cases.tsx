@@ -51,7 +51,7 @@ export const Cases: React.FC = handleViewport(
           как мы реализовали совместный проект
         </h3>
         <Slider
-          itemsToShow={vw < 640 ? 1 : 3}
+          itemsToShow={vw < 768 ? 1 : 3}
           pagination={false}
           className={css.slider}
         >

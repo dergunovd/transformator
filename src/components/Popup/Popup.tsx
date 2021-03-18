@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import Modal from "react-modal";
 import axios from "axios";
 
@@ -18,6 +18,7 @@ Object.assign(Modal.defaultStyles.content, {
   margin: "auto",
   paddingTop: "50px",
   borderRadius: "12px",
+  zIndex: "9999",
   background: `#000 url(${bg}) right top / cover no-repeat`,
 });
 
@@ -32,9 +33,24 @@ export const Popup: React.FC = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [agree, setAgree] = useState(false);
+  const [disable, setDisable] = useState(false);
+
+  useEffect(
+    () => () => {
+      setSend(false);
+      setPhone("");
+      setEmail("");
+      setName("");
+      setMessage("");
+      setAgree(false);
+    },
+    [isOpen]
+  );
+
   const send = useCallback(
     (e) => {
       e.preventDefault();
+      setDisable(true);
       const SERVER_HOST = "https://server.transformator.media";
       // const SERVER_HOST = "http://server.transformator.dergunov.net";
       if (type === "phone") {
@@ -45,14 +61,20 @@ export const Popup: React.FC = () => {
             product: config?.product,
           })
           .then(() => setSend(true))
-          .catch(console.error);
+          .catch(console.error)
+          .finally(() => {
+            setDisable(false);
+          });
       } else if (type === "email") {
         axios
           .post(`${SERVER_HOST}/send`, {
             email,
           })
           .then(() => setSend(true))
-          .catch(console.error);
+          .catch(console.error)
+          .finally(() => {
+            setDisable(false);
+          });
       } else {
         axios
           .post(`${SERVER_HOST}/feedback`, {
@@ -61,7 +83,10 @@ export const Popup: React.FC = () => {
             message,
           })
           .then(() => setSend(true))
-          .catch(console.error);
+          .catch(console.error)
+          .finally(() => {
+            setDisable(false);
+          });
       }
     },
     [config, email, message, name, phone, type]
@@ -171,6 +196,7 @@ export const Popup: React.FC = () => {
             <label className={css.checkbox}>
               <input
                 type="checkbox"
+                checked={agree}
                 onChange={(e) => setAgree(e.target.checked)}
               />
               <span className={css.myCheckbox} />Я принимаю условия передачи
@@ -182,7 +208,7 @@ export const Popup: React.FC = () => {
           </>
         )}
         {!isSend && (
-          <Button className={css.button} disabled={!agree}>
+          <Button className={css.button} disabled={!agree || disable}>
             Отправить
           </Button>
         )}

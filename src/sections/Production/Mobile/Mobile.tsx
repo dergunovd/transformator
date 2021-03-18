@@ -13,11 +13,11 @@ export const Mobile = () => {
     <div className={css.mobile}>
       <a
         className={classNames(css.mobileLink, { [css.hidden]: isHidden })}
-        href="tel:+79255556767"
+        href="tel:+79377785555"
         rel="noopener noreferrer"
         target="_blank"
       >
-        + 7 925 555-67-67
+        + 7 937 778-55-55
       </a>
     </div>
   );

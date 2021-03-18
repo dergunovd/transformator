@@ -35,6 +35,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "scp -r build/* transformator@34.90.104.189:/home/transformator/transformator",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
