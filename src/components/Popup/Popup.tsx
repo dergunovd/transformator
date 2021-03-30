@@ -12,8 +12,7 @@ Object.assign(Modal.defaultStyles.content, {
   width: "90%",
   left: "20px",
   right: "20px",
-  minHeight: "100px",
-  height: "auto",
+  minHeight: "120px",
   maxHeight: "600px",
   margin: "auto",
   paddingTop: "50px",
@@ -46,6 +45,12 @@ export const Popup: React.FC = () => {
     },
     [isOpen]
   );
+
+  useEffect(() => {
+    Object.assign(Modal.defaultStyles.content, {
+      height: isSend ? "120px" : "auto",
+    });
+  }, [isSend]);
 
   const send = useCallback(
     (e) => {
