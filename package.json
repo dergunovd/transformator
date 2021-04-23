@@ -1,41 +1,30 @@
 {
   "name": "transformator",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.1",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^14.14.6",
-    "@types/react": "^16.9.55",
-    "@types/react-dom": "^16.9.9",
-    "@types/react-modal": "^3.10.6",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
-    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
-    "prettier": "^2.1.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-elastic-carousel": "^0.9.3",
     "react-in-viewport": "^1.0.0-alpha.15",
-    "react-is": "^17.0.1",
-    "react-modal": "^3.11.2",
+    "react-modal": "^3.12.1",
     "react-parallax-mousemove": "^1.1.0",
     "react-reveal": "^1.2.2",
-    "react-scripts": "3.4.3",
-    "react-scroll-parallax": "^2.3.4",
+    "react-scripts": "4.0.3",
+    "react-scroll-parallax": "^2.3.5",
     "react-spring": "^8.0.27",
     "react-viewport-hooks": "^1.5.0",
-    "styled-components": "^5.2.1",
-    "typescript": "^3.9.7"
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "scp -r build/* transformator@34.90.104.189:/home/transformator/transformator",
+    "deploy": "scp -r build/* transformator@transformator.media:/home/transformator/transformator",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -54,6 +43,16 @@
     ]
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.11"
+    "@types/classnames": "^2.2.11",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^13.0.16",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-modal": "^3.12.0",
+    "typescript": "^3.9.7",
+    "node-sass": "^4.14.1"
   }
 }
