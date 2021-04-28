@@ -19,7 +19,7 @@ export const Social = () => {
       <div className={css.social}>
         <a
           className={classNames(css.socialLink, { [css.hidden]: isHidden })}
-          href="https://tgme.pro/TransformatorTV"
+          href="https://t.me/TRSTPROD"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -35,7 +35,7 @@ export const Social = () => {
         </a>
         <a
           className={classNames(css.socialLink, { [css.hidden]: isHidden })}
-          href="https://wa.me/79255556767"
+          href="https://api.whatsapp.com/send?phone=79377785555"
           rel="noopener noreferrer"
           target="_blank"
         >
